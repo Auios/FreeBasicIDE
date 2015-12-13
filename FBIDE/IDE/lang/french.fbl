@@ -1,0 +1,299 @@
+[FBIde]
+234=Chemins actifs
+235=Modifier les chemins actifs aux lancement/compilation
+236=Afficher log
+237=Afficher log de la compilation
+238=Ligne de commande de lancement du programme
+239=Réglages du compilateur et du chemin
+240=Ligne de commande de lancement du programme
+241=Fichier d'aide ( .chm )
+242=FreeBASIC 
+243=Fichiers d'aide Windows (*.chm)
+244=Le chemin du compilateur n'est pas défini ou est erroné
+
+;Générique
+1=Bienvenue a FBIde!
+2=&OK
+3=Annuler
+165=Ligne
+166=Fichier
+167=Erreur No
+168=Messages
+
+;Menus
+4=&Fichier
+5=&Editer
+6=&Rechercher
+7=&Voir
+8=Ou&tils
+9=&Exécuter
+10=&Aide
+
+11=&Nouveau ..
+12=Ouvrir nouveau document vide
+13=&Ouvrir ..
+14=Ouvrir nouveau document
+15=Enregistrer
+16=Enregistrer document courant
+17=Enregistrer &Sous ..
+18=Enregistrer Document avec nouveau nom
+19=Enregistrer tout
+20=Enregistrer tous les fichiers ouverts
+21=Fermer
+22=fermer fichier courant
+23=Nouvelle &Fenêtre 
+24=Ouvrir nouvelle fenêtre d'édition
+25=&Quitter
+26=Quitter FBIde
+169=Charger session
+170=Charge la dernière session enregistrée
+171=Enregistrer session
+172=Enregistre la session courante
+173=Tout fermer
+174=Fermer tous les fichiers ouverts
+
+27=&Annuler
+28=Annulerla dernière action
+29=&Rétablir
+30=Rétablir dernière action
+31=Co&uper
+32=Couper texte sélectionné vers le presse papier
+33=&Copier
+34=Copier text sélectionné vers le presse papier
+35=&Coller
+36=Coller depuis le presse papier
+37=&Sélectionner tous
+38=Sélectionner tous le document
+39=Sélectionner la &ligne
+40=Sélectionner la ligne courante.
+41=&Indenter
+42=Indenter texte sélectionné vers la droite
+43=Réduire l'indentation
+44=Désindenter le texte vers la gauche
+45=Mettre le bloc en commentaire  
+46=Mettre texte sélectionné en commentaire
+47=Décommenter le bloc
+48=Décommenter texte sélectionné
+
+49=Chercher 
+50=Chercher dans le document
+51=Chercher le suivant 
+52=Répéter la dernière recherche
+53=Remplacer 
+54=Remplacer le texte dans le document
+55=Aller à la Ligne...
+56=Aller à la ligne dans le document
+
+57=Paramètres
+58=Régler les paramètres de l'éditeur
+59=Voir fenêtre de résultats
+60=Montre le tableau de sortie de console
+61=Procédures... 
+62=Ouvrir fenêtre du navigateur de procédures/fontions
+175=Format
+176=Changer le formatage du code source
+
+63=Compiler
+64=Compiler fichier courant
+65=Compiler et Exécuter
+66=Compiler et exécuter le fichier courant
+67=Exécuter
+68=Exécuter dernier fichier compilé
+69=Exécution Accélérée
+70=Exécuter le programme sans enregistrer (fichier temporaire)
+71=Ligne de commande
+72=Ouvrir fenêtre de ligne de commande
+73=&Paramètres Ligne de commande...
+74=Régler les paramètres d'exécution du programme
+75=&Paramètres du compilateur...
+76=Régler la liste des paramètres de prototypage du programme
+77=&Montrer code de sortie de programme
+78=Montrer la valeur de retour au système.
+
+79=&A propos de...
+80=Montrer la fenêtre d'information sur FBIDE
+
+81=Fermer tous
+82=Fermer tous les fichiers actuellement ouverts
+
+;Barre d'outils
+83=Nouveau Fichier (Ctrl+N)
+84=Ouvrir Fichier (Ctrl+O)
+85=Sauver Fichier (Ctrl+S)
+86=Sauver tous les fichiers
+87=Fermer fichier courant
+
+88=Couper (Ctrl+X)
+89=Copier (Ctrl+C)
+90=Coller (Ctrl+V)
+
+91=Annuler (Ctrl+Z)
+92=Rétablir (Ctrl+Shift+Z)
+
+93=Compiler (Ctrl+F9)
+94=Exécuter (Ctrl+Shift+F9)
+95=Compiler et Exécuter(F9)
+96=Exécution rapide (F5)
+97=Ouvrir/Fermer fenêtre de sortie
+
+;Boite de dialogue des réglages de FBIde
+98=Paramètres de FBIde
+99=Général
+100=Thèmes
+101=Mots clés
+102=Compilateur
+
+;Onglet Général
+103=Voir numéros de lignes
+104=Paramètres de l'éditeur
+105=Surligner niveau de parenthèse correspondant
+106=Surligner les mots clés
+107=Montrer marge de droite
+108=Montrer fins de lignes
+109=Montrer les espaces
+110=Montrer guides d'indentation
+111=Replier marge
+112=Indentation automatique
+116=Largeur de la marge de droite
+117=Taille des tabulations
+201=Language
+202=NB: Changer de langue nécessite de relancer FBIDE
+203=Choix de la langue:
+232=Afficher écran de démarrage
+
+;Onglet Compilation
+113=Paramètres du compilateur
+114=Chemin du compilateur
+115=Ligne de commande du compilateur
+
+;Onglet Thèmes
+118=Commentaires
+119=Chiffres
+120=Mots clés 1
+121=Chaîne de caractères ouverte
+122=Préprocesseur
+123=Opérateur
+124=Identificateur
+125=Date (ne fonctionne pas)
+126=Chaîne de caractères fermée
+127=Mots clés 2
+128=Mots clés 3
+129=Mots clés 4
+130=Curseur
+131=Numéros de ligne
+132=Texte sélectionné
+133=Parenthèses connectées
+134=Parenthèses déconnectées
+135=Editeur
+
+136=Gras
+137=Italique
+138=Souligné
+139=Enregistrer le thème
+140=Thème
+141=Créer nouveau theme
+
+142=Couleurs
+143=Type
+144=Couleur de caractères
+145=Couleur de fond
+146=Style de police
+147=Police\r\n
+148=Grosseur de police\r\n
+149=Mots clés\r\n
+150=Sélection un groupe de mots clés
+151=Groupe 1
+152=Groupe 2
+153=Groupe 3
+154=Groupe 4
+
+155=Ouvrir fichier
+156=FreeBASIC (fbc.exe)|fbc.exe|tous programmes (*.exe)|*.exe
+
+157=Entrer le nom du thème:
+158=Paramètres...
+
+159=Thème \"
+160=\" déjà existant!\n Remplacer?
+161=Message
+
+
+;Conversion
+162=Type de conversion:
+163=Démarrer!
+164=Aperçu!
+
+;Exécution
+177=Paramètres de ligne de commande de votre programme
+178=Rien a compiler!
+179=Erreur
+180=Vous devez d'abord compiler le programme avant de l'exécuter! Compiler?
+181=Compiler?
+182=Une erreur est survenue durant l'exécution \"
+183=Vous devez enregistrer le fichier avant de continuer!
+184=Enregistrer le fichier?
+
+185=Code de Retour
+
+;Fichiers
+186=Charger le fichier
+187=Fichiers FB (*.bas)|*.bas|Fichier Entête FB (*.bi)|*.bi|Fichier HTML
+(*.html)|*.html|Tous les fichiers(*)|*.*|
+188=Fichier \"
+189=\" a été modifier, sauver?
+190=Le fichier '%s' a été modifié.\nVoulez-vous sauver les changements?
+192=Fichier Modifié
+193=Fichiers FB (*.bas)|*.bas|Fichier Entête FB (*.bi)|*.bi|Fichier HTML
+(*.html)|*.html|
+194=Tous les fichiers(*)|*.*|
+195=Sauver Fichier
+196=Utiliser le nouveau fichier?
+197=Question
+198=Session FBIde (*.fbs)|*.fbs|Tous les fichiers (*)|*.*|
+199=Sauver la session
+200=Fichiers HTML (*.html)|*.html|
+
+;Boite de dialogue
+204=Un Environnement de développement "Logiciel Libre" pour le compilateur
+FreeBasic
+205=(www.freebasic.net)
+206=Programmé en C++ et utilisant wxWidgets et le contrôle d'édition de texte
+Scintilla.
+207=crédits:
+208=programmeurs
+209=Programmeur en chef, administrateur de programme et créateur du projet
+210=Superviseur de projet, code source pour réseau (client et serveur)
+211=auto-complétion automatique du code source 
+212=Routines d'exportation et de formatage du code
+213=Modules d'internationalisation (i18n)
+214=Divers
+215=Administrateur de site web et documentation
+216=Logo de l'écran de démarrage
+217=testeurs
+218=...et tous ceux qu'on a oubliés!
+
+;==================================
+;Additionel: (groupes)
+;Recherche
+219=Trouver le texte
+220=Remplacer le texte
+221=Aller à la ligne numéro:
+222=Aller à la ligne
+226=Chercher:
+;Type, comme dans "de quel type est cette chose", pour expliquer ceci
+227=Type
+228=Arguments
+
+;Voir
+223=Convertir le format
+224=Navigateur de Procédures/Fonctions
+
+;Information - DoMi(french2)
+225=Fichiers de langue par:
+
+;Fichier sans nom :)
+229=Sans titre
+
+;Saving
+230=Enregistrer les modifications?
+231=Enregistrer avant de quitter?
