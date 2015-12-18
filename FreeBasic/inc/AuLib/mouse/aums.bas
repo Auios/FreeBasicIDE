@@ -52,4 +52,20 @@ namespace Auios
         printf(!"\n")
         return 0
     end function
+    
+    function AuMouseHide(byref thisMs as AuMouse) as integer
+        with thisMs
+            .visible = 0
+            setmouse(.x,.y,.visible,.clip)
+        end with
+        return 0
+    end function
+    
+    function AuMouseShow(byref thisMs as AuMouse) as integer
+        with thisMs
+            .visible = 0
+            setmouse(.x,.y,.visible,.clip)
+        end with
+        return 0
+    end function
 end namespace

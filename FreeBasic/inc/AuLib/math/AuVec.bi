@@ -6,12 +6,17 @@
     'inclib "auvec"
 
     namespace Auios
-        type AuVec2
-            as double x,y
+        type AuVectorInt2
+            as integer x,y
         end type
-        
-        type AuVec3
-            as double x,y,z
+        type AuVectorUInt2
+            as uinteger x,y
+        end type
+        type AuVectorInt3
+            as integer x,y,z
+        end type
+        type AuVectorUInt3
+            as uinteger x,y,z
         end type
     end namespace
 #endif
