@@ -15,8 +15,13 @@
                 as long depth
                 as long pages
                 as long flags
+                as long bpp
+                as long pitch
+                as long rate
                 as ubyte visible
+                as zstring*48 driver
                 as zstring*48 title
+                as any ptr buffer
                 
                 declare sub Set(w as long = 800, h as long = 600, depth as long = 32, pages as long = 1, flags as long = 0, title as zstring*32 = "Application")
                 declare function GetSize(byref w as long, byref h as long) as integer

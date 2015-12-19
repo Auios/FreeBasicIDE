@@ -16,6 +16,8 @@ namespace Auios
             .pages = pages
             .flags = flags
             .title = title
+            .buffer = screenPtr()
+            screenInfo(,,,.bpp,.pitch,.rate,.driver)
         end with
         return thisWnd
     end function
