@@ -673,6 +673,7 @@ const CF_DEFER = &h0002
 const SD_RECEIVE = &h00
 const SD_SEND = &h01
 const SD_BOTH = &h02
+
 type GROUP as ulong
 const SG_UNCONSTRAINED_GROUP = &h01
 const SG_CONSTRAINED_GROUP = &h02

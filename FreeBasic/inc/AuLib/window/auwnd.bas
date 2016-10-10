@@ -35,7 +35,7 @@ namespace Auios
     function AuWindowCreate(thisWnd as AuWindow) as integer
         dim as integer result
         with thisWnd
-            result = screenres(.w,.h,.depth,.pages,.flags or fb.gfx_high_priority)
+            result = screenres(.w,.h,.depth,.pages,.flags)
             windowtitle .title
             .visible = 1
         end with

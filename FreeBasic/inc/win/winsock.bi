@@ -22,6 +22,11 @@
 #include once "_bsd_types.bi"
 #include once "inaddr.bi"
 
+#define SD_RECEIVE &h00
+#define SD_SEND &h01
+#define SD_BOTH &h02
+
+
 '' The following symbols have been renamed:
 ''     procedure select => select_
 ''     procedure socket => socket_
