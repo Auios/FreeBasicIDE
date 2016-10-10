@@ -163,6 +163,18 @@ end type
 const WSADESCRIPTION_LEN = 256
 const WSASYS_STATUS_LEN = 128
 
+'type WSAData
+'    wVersion as WORD
+'    wHighVersion as WORD
+'    szDescription as zstring * WSADESCRIPTION_LEN+1
+'    szSystemStatus as zstring * WSASYS_STATUS_LEN+1
+'    iMaxSockets as ushort
+'    iMaxUdpDg as ushort
+'    lpVendorInfo as zstring ptr
+'end type
+
+type LPWSADATA as WSADATA ptr
+
 type WSADATA
 	wVersion as WORD
 	wHighVersion as WORD

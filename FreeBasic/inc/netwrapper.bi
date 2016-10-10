@@ -3,7 +3,7 @@
 '// 
 '// These functions should be used instead of calling platform specific network things
 '//
-'// Made by Jattenalle
+'// Made by Johannes Pihl (Jattenalle)
 
 #include "debugTools.bi"
 
@@ -17,7 +17,6 @@
 
 'cast(ubyte ptr, @myConnection.ip)[0], cast(ubyte ptr, @myConnection.ip)[1], cast(ubyte ptr, @myConnection.ip)[2], cast(ubyte ptr, @myConnection.ip)[3]
 
-
 '// Server and HTTP
 const RECVBUFFLEN = 65536
 const NEWLINE = chr(13, 10)
@@ -26,6 +25,8 @@ dim shared as fd_set SOCKETS_Read, SOCKETS_Write, SOCKETS_Exception
 dim shared as timeval TIMEOUT
 TIMEOUT.tv_sec=0
 TIMEOUT.tv_usec=0
+
+dim shared as WSADATA wsaData
 
 
 type _CONNECTION_
@@ -42,8 +43,13 @@ type _CONNECTION_
 '	lastRecv as integer
 end type
 
+'WSA Start
+function nw_start() as long
+    return WSAStartup( MAKEWORD( 1, 1 ), @wsaData )
+end function
+
 '// Takes hostname, resolves to packed IP (integer)
-function NET_resolveHost( hostname as string ) as integer
+function nw_resolveHost( hostname as string ) as integer
 	dim ia as in_addr
 	dim hostentry as hostent ptr
 	ia.S_addr = inet_addr( hostname )
@@ -104,7 +110,7 @@ end function
 
 '// Connect to uri on port using cc, return 0 on success, anything else is an error code
 function nw_connect(byval cc as _CONNECTION_ ptr, byval uri as string, byval port as integer) as integer
-	cc->ip							=	NET_resolveHost(uri)
+	cc->ip							=	nw_resolveHost(uri)
 	cc->socket_in.sin_port			=	htons( port )
 	cc->socket_in.sin_family		=	AF_INET
 	cc->socket_in.sin_addr.S_addr	=	cc->ip
