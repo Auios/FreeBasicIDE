@@ -57,7 +57,7 @@ const NOBLOCK = true
     function = TRUE
   end function
   function hShutdown( ) as integer
-    function = WSACleanup( )	
+    function = WSACleanup( )
   end function
   hStart()
 #else

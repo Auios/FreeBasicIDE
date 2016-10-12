@@ -2,13 +2,16 @@
 
 #include "crt.bi"
 
-declare function db (s as string) as string
-function db(s as string) as string
+sub db(s as string)
     var smsg = s & !"\n"
     printf(smsg)
-    return smsg
-end function
+end sub
 
 sub dbBar()
     printf(!"------------------\n")
+end sub
+
+sub dbError(s as string)
+    printf(s & !"\n")
+    sleep()
 end sub

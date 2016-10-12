@@ -5,10 +5,12 @@
 '//
 '// Made by Johannes Pihl (Jattenalle)
 
+#pragma once
+
 #include "debugTools.bi"
 
 #ifdef __FB_WIN32__
-  #include once "win/winsock.bi"
+  #include once "win/winsock2.bi"
 #endif
 
 #define S_RECV	0
@@ -27,7 +29,7 @@ TIMEOUT.tv_sec=0
 TIMEOUT.tv_usec=0
 
 dim shared as WSADATA wsaData
-
+dim shared as sockaddr_in null_addr_in
 
 type _CONNECTION_
 	socket as SOCKET
@@ -47,6 +49,51 @@ end type
 function nw_start() as long
     return WSAStartup( MAKEWORD( 1, 1 ), @wsaData )
 end function
+
+'function nw_Start( byval verhigh as integer = 1, byval verlow as integer = 1 ) as boolean
+'    dim wsaData as WSAData
+'    if( WSAStartup( MAKEWORD( verhigh, verlow ), @wsaData ) <> 0 ) then
+'        return FALSE
+'    end if	
+'    if( wsaData.wVersion <> MAKEWORD( verhigh, verlow ) ) then
+'        WSACleanup( )
+'        return FALSE
+'    end if
+'    function = TRUE
+'end function
+
+function nw_Shutdown( ) as integer
+    function = WSACleanup( )
+end function
+
+'Listen
+sub nw_listen(cc as _CONNECTION_, port as integer)
+    db("Creating listener socket...")
+    with cc
+        .socket_in.sin_port = htons(port)
+        'cc->socket_in.sin_port = port
+        .socket_in.sin_family = AF_INET
+        .socket_in.sin_addr.S_addr = INADDR_ANY
+        .socket=opensocket(AF_INET, SOCK_STREAM, 0)
+        if .socket=INVALID_SOCKET then
+            color 12: db("ERROR: Unable to open server socket."): color 7
+            sleep
+            end
+        end if
+        if bind(cc.socket, cptr(sockaddr ptr, @.socket_in), len(.socket_in)) then
+            color 12: db("ERROR: Unable to bind listening socket. "& WSAGetLastError()): color 7
+            sleep
+            end
+        end if
+        'listen(.socket, SOMAXCONN)
+        if listen(.socket, 8) then
+            color 12: db("ERROR: Unable to initiate listen. "& WSAGetLastError()): color 7
+            sleep
+            end
+        end if
+    end with
+    db("Created!")
+end sub
 
 '// Takes hostname, resolves to packed IP (integer)
 function nw_resolveHost( hostname as string ) as integer
@@ -77,7 +124,6 @@ end function
 '// Returns number of bytes received if no error, returns error code on error. Error code must be < 0
 function nw_recv(byval cc as _CONNECTION_, byval buffer as any ptr, byval bufferlen as integer=RECVBUFFLEN) as integer
 	dim as integer bytes = recv( cc.socket, buffer, bufferlen, 0 )
-	if bytes < 0 then db("ERROR: nw_ERR"& bytes &" when receiving on socket "& cc.socket &" ["& cc.ip &"]")
 	return bytes
 end function
 
@@ -109,33 +155,36 @@ function nw_isset(byval cc as _CONNECTION_, byval w as integer) as integer
 end function
 
 '// Connect to uri on port using cc, return 0 on success, anything else is an error code
-function nw_connect(byval cc as _CONNECTION_ ptr, byval uri as string, byval port as integer) as integer
-	cc->ip							=	nw_resolveHost(uri)
-	cc->socket_in.sin_port			=	htons( port )
-	cc->socket_in.sin_family		=	AF_INET
-	cc->socket_in.sin_addr.S_addr	=	cc->ip
-	cc->socket						=	opensocket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
-	if cc->socket=INVALID_SOCKET then
-		db("ERROR: Unable to open socket.")
-		cc->socket = 0
-		return -1 '// Error
-	else
-		if connect( cc->socket, cast( PSOCKADDR, @cc->socket_in ), len( cc->socket_in )) = SOCKET_ERROR then
-			dim as ubyte ptr i = cptr(ubyte ptr, @cc->ip)
-			db("ERROR: "& uri &" ["& i[0] &"."& i[1] &"."& i[2] &"."& i[3] &"] is unreachable")
-			closesocket( cc->socket )
-			cc->socket = 0
-			return -2 '// Error
-		else
-			return 0 '// All went well!
-		end if
-	end if
+function nw_connect(byval cc as _CONNECTION_, byval uri as string, byval port as integer) as integer
+    with cc
+        .ip							=	nw_resolveHost(uri)
+        .socket_in.sin_port			=	htons( port )
+        .socket_in.sin_family		=	AF_INET
+        .socket_in.sin_addr.S_addr	=	.ip
+        .socket						=	opensocket(AF_INET, SOCK_STREAM, IPPROTO_TCP)
+        if .socket=INVALID_SOCKET then
+            db("ERROR: Unable to open socket.")
+            .socket = 0
+            return -1 '// Error
+        else
+            if connect( .socket, cast( PSOCKADDR, @.socket_in ), len( .socket_in )) = SOCKET_ERROR then
+                dim as ubyte ptr i = cptr(ubyte ptr, @.ip)
+                db("ERROR: "& uri &" ["& i[0] &"."& i[1] &"."& i[2] &"."& i[3] &"] is unreachable")
+                db("Last error: " & WSAGetLastError())
+                closesocket( .socket )
+                .socket = 0
+                return -2 '// Error
+            else
+                return 0 '// All went well!
+            end if
+        end if
+    end with
 end function
 
 '// Disconnect and clear a socket, must not fail!
-function nw_disconnect(byval cc as _CONNECTION_ ptr) as integer
-	shutdown(cc->socket, SD_BOTH)
-	closesocket(cc->socket)
-	cc->socket = 0
+function nw_disconnect(byval cc as _CONNECTION_) as integer
+	shutdown(cc.socket, SD_BOTH)
+	closesocket(cc.socket)
+	cc.socket = 0
 	return TRUE
 end function
