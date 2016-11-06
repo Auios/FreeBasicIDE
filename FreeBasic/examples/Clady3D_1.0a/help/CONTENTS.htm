@@ -1,0 +1,1583 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<base target=Frame1>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808027">CONTENTS</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808028"><span
+lang=RO>History</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808029"><span
+lang=RO>Installation</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808030"><span
+lang=RO>The engine</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808031"><span
+lang=RO>Features</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808032"><span
+lang=RO>Thanks</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808033"><span
+lang=RO>Licensing agreement</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808034"><span
+lang=RO>Commands</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808035"><span
+lang=RO>1.Beam</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808036"><span
+lang=RO>nAddBeam</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808037"><span
+lang=RO>nSetBeamPosition</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808038"><span
+lang=RO>nSetBeamSize</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808039"><span
+lang=RO>2.Billboard</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808040"><span
+lang=RO>nLoadBillboard</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808041"><span
+lang=RO>nSetBillboardScale</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808042"><span
+lang=RO>nSetBillboardColor</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808043"><span
+lang=RO>3.Bolt</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808044"><span
+lang=RO>nAddBoltSceneNode</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808045"><span
+lang=RO>nSetBoltProperties</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808046"><span
+lang=RO>4.BSP</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808047"><span
+lang=RO>nLoadMeshBSPinRAM</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808048"><span
+lang=RO>nCreateNodeBSPfromMeshBSP</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808049"><span
+lang=RO>nCreateNodeBSPfromFile</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808050"><span
+lang=RO>5.Camera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808051"><span
+lang=RO>nCreateCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808052"><span
+lang=RO>nCreateCameraFPS</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808053"><span
+lang=RO>nCreateCameraMaya</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808054"><span
+lang=RO>nCreateCameraIsometric</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808055"><span
+lang=RO>nEnableControlCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808056"><span
+lang=RO>nDisableControlCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808057"><span
+lang=RO>nSetCameraFOV</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808058"><span
+lang=RO>nSetCameraRange</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808059"><span
+lang=RO>nSetCameraTarget</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808060"><span
+lang=RO>nSetActiveCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808061"><span
+lang=RO>nSetCameraViewPort</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808062"><span
+lang=RO>nSetCameraAspectRatio</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808063"><span
+lang=RO>nGetCameraTargetX</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808064"><span
+lang=RO>nGetCameraTargetY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808065"><span
+lang=RO>nGetCameraTargetZ</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808066"><span
+lang=RO>nGetCameraTargetPos</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808067"><span
+lang=RO>nGetCameraDir</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808068"><span
+lang=RO>nGetViewPortWidth</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808069"><span
+lang=RO>nGetViewPortHeight</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808070"><span
+lang=RO>6.Clouds</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808071"><span
+lang=RO>nCreateClouds</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808072"><span
+lang=RO>7.Collisions</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808073"><span
+lang=RO>nDrawLine3D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808074"><span
+lang=RO>nSetCollisions</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808075"><span
+lang=RO>nSetCollisionsBSP</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808076"><span
+lang=RO>nGetCollisionNodeFromCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808077"><span
+lang=RO>nGetCollisionNodeFromScreenCoordinates</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808078"><span
+lang=RO>nGetCollisionNodeFromRay</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808079"><span
+lang=RO>nGetScreenCoordinatesFrom3Dposition</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808080"><span
+lang=RO>nCreateGeneralTriangleSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808081"><span
+lang=RO>nCreateTriangleSelectorBSP</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808082"><span
+lang=RO>nCreateOctTreeTriangleSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808083"><span
+lang=RO>nCreateTriangleSelectorFromBoundingBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808084"><span
+lang=RO>nCreateTerrainSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808085"><span
+lang=RO>nCreateMetaTriangleSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808086"><span
+lang=RO>nAddTriangleSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808087"><span
+lang=RO>nRemoveAllTriangleSelectors</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808088"><span
+lang=RO>nRemoveTriangleSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808089"><span
+lang=RO>nGetNodeAndCollisionPointFromCamera</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808090"><span
+lang=RO>nGetNodeAndCollisionPointFromRay</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808091"><span
+lang=RO>8.Entity</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808092"><span
+lang=RO>8.1.Entity control</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808093"><span
+lang=RO>nDeleteEntity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808094"><span
+lang=RO>nShowEntity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808095"><span
+lang=RO>nHideEntity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808096"><span
+lang=RO>nSetNameEntity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808097"><span
+lang=RO>nSetEntityParent</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808098"><span
+lang=RO>nSetEntityTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808099"><span
+lang=RO>nSetEntityColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808100"><span
+lang=RO>nSetEntitySpecularColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808101"><span
+lang=RO>nSetEntityShininess</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808102"><span
+lang=RO>nSetEntityAlpha</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808103"><span
+lang=RO>nSetEntityType</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808104"><span
+lang=RO>nSetEntityFlag</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808105"><span
+lang=RO>nCloneEntity</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808106"><span
+lang=RO>8.2.Entity movement</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808107"><span
+lang=RO>nSetEntityPosition</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808108"><span
+lang=RO>nSetEntityAbsoluteRotation</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808109"><span
+lang=RO>nSetEntityLocalRotation</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808110"><span
+lang=RO>nSetEntityLocalRotation2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808111"><span
+lang=RO>nSetEntityRelMove</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808112"><span
+lang=RO>nSetEntityToPoint</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808113"><span
+lang=RO>nSetEntityPointToTarget</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808114"><span
+lang=RO>8.3.Entity state</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808115"><span
+lang=RO>nGetEntityX</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808116"><span
+lang=RO>nGetEntityY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808117"><span
+lang=RO>nGetEntityZ</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808118"><span
+lang=RO>nGetEntityPitch</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808119"><span
+lang=RO>nGetEntityYaw</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808120"><span
+lang=RO>nGetEntityRoll</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808121"><span
+lang=RO>nGetEntityName</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808122"><span
+lang=RO>nGetLinePick</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808123"><span
+lang=RO>nGetEntitiesDistance</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808124"><span
+lang=RO>nGetDistance</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808125"><span
+lang=RO>nGetEntitiesCollide</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808126"><span
+lang=RO>nGetDirection</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808127"><span
+lang=RO>nGetHorAngle</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808128"><span
+lang=RO>9.Fader</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808129"><span
+lang=RO>nSetFadeIn</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808130"><span
+lang=RO>nSetFadeOut</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808131"><span
+lang=RO>nSetFaderColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808132"><span
+lang=RO>nGetFadeIsReady</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808133"><span
+lang=RO>10.File</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808134"><span
+lang=RO>nChangeDirectory</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808135"><span
+lang=RO>nGetExistFile</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808136"><span
+lang=RO>nLoadZip</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808137"><span
+lang=RO>File I/O funtions</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808138"><span
+lang=RO>nLoadScene</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808139"><span
+lang=RO>nSaveScene</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808140"><span
+lang=RO>11.Font</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808141"><span
+lang=RO>nLoadFont</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808142"><span
+lang=RO>nSetFont</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808143"><span
+lang=RO>nDrawFontText</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808144"><span
+lang=RO>12.Globals</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808145"><span
+lang=RO>nSetBackGroundColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808146"><span
+lang=RO>nSetAmbientLight</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808147"><span
+lang=RO>nSetShadowColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808148"><span
+lang=RO>nSetFog</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808149"><span
+lang=RO>nScreenShot</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808150"><span
+lang=RO>InitEngine</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808151"><span
+lang=RO>EngineRun</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808152"><span
+lang=RO>UpdateEngine</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808153"><span
+lang=RO>CloseEngine</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808154"><span
+lang=RO>EndEngine</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808155"><span
+lang=RO>nEnableAntialias</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808156"><span
+lang=RO>nEnableVsync</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808157"><span
+lang=RO>nSetFrameRateLimit</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808158"><span
+lang=RO>BeginScene</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808159"><span
+lang=RO>EndScene</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808160"><span
+lang=RO>Fps</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808161"><span
+lang=RO>nGetTrisRendered</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808162"><span
+lang=RO>nGetLightCount</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808163"><span
+lang=RO>nGetPrimitiveCount</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808164"><span
+lang=RO>nGetBodyCount</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808165"><span
+lang=RO>13.Graphics 2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808166"><span
+lang=RO>nSetTransparency2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808167"><span
+lang=RO>nSetColors2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808168"><span
+lang=RO>nDrawLine2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808169"><span
+lang=RO>nDrawRect2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808170"><span
+lang=RO>nDrawPixel2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808171"><span
+lang=RO>nDrawImage2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808172"><span
+lang=RO>nDrawImage2DwithAlpha</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808173"><span
+lang=RO>nDrawOval2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808174"><span
+lang=RO>nDrawImageSprites2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808175"><span
+lang=RO>nCreateImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808176"><span
+lang=RO>nRemoveImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808177"><span
+lang=RO>nLockImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808178"><span
+lang=RO>nUnlockImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808179"><span
+lang=RO>nCopyImageToScaling</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808180"><span
+lang=RO>nGetImageWidth</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808181"><span
+lang=RO>nGetImageHeight</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808182"><span
+lang=RO>nBlendImages</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808183"><span
+lang=RO>nAlphaBlendImages</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808184"><span
+lang=RO>nPaintTileImageWithAlpha</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808185"><span
+lang=RO>14.Grass</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808186"><span
+lang=RO>nAddGrass</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808187"><span
+lang=RO>nSetGrassDensity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808188"><span
+lang=RO>nSetGrassWind</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808189"><span
+lang=RO>nGetGrassDrawCount</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808190">15.Input</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808191"><span
+lang=RO>KeyDown</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808192"><span
+lang=RO>KeyHit</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808193"><span
+lang=RO>MouseHit</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808194"><span
+lang=RO>MouseDown</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808195"><span
+lang=RO>MoveMouse</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808196"><span
+lang=RO>nGetMouseWheel</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808197"><span
+lang=RO>nGetMouseX</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808198"><span
+lang=RO>nGetMouseY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808199"><span
+lang=RO>ShowMouse</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808200"><span
+lang=RO>HideMouse</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808201"><span
+lang=RO>Joystick</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808202">Keyboard
+&amp; Mouse</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808203">Keyboard</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808204">Mouse</a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808205"><span
+lang=RO>16.Lens Flare</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808206"><span
+lang=RO>nCreateLensFlareNode</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808207"><span
+lang=RO>nsetLensFlareScale</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808208"><span
+lang=RO>17.Light</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808209"><span
+lang=RO>nCreateLight</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808210"><span
+lang=RO>nSetLightRadius</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808211"><span
+lang=RO>nSetLightCastShadow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808212"><span
+lang=RO>nSetLightColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808213"><span
+lang=RO>nSetLightFalloff</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808214"><span
+lang=RO>nSetLightConeAngles</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808215"><span
+lang=RO>nSetLightAttenuation</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808216"><span
+lang=RO>nSetLightDirection</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808217"><span
+lang=RO>18.Materials</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808218"><span
+lang=RO>18.1.For meshes</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808219"><span
+lang=RO>nSetMaterialType</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808220"><span
+lang=RO>nSetMaterialFlag</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808221"><span
+lang=RO>nSetMaterialTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808222"><span
+lang=RO>nSetMaterialColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808223"><span
+lang=RO>nSetMaterialEmissiveColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808224"><span
+lang=RO>nSetMaterialShininess</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808225"><span
+lang=RO>nSetMaterialAlpha</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808226"><span
+lang=RO>nSetMaterialTextureUV</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808227"><span
+lang=RO>nSetMaterialTextureAngle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808228"><span
+lang=RO>nSetMaterialTextureScale</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808229"><span
+lang=RO>nGetMaterialCount</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808230"><span
+lang=RO>18.2.For Bodies</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808231"><span
+lang=RO>nCreateBodyMaterial</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808232"><span
+lang=RO>nSetBodyMaterial</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808233"><span
+lang=RO>nSetBodyMaterialElasticity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808234"><span
+lang=RO>nSetBodyMaterialFriction</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808235"><span
+lang=RO>nSetBodyMaterialSoftness</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808236"><span
+lang=RO>nSetBodyMaterialCollidable</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808237"><span
+lang=RO>19.Maths</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808238"><span
+lang=RO>nGetWrapValue</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808239"><span
+lang=RO>nGetCurveValue</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808240"><span
+lang=RO>nGetDistance2D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808241"><span
+lang=RO>nGetDistance3D</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808242"><span
+lang=RO>nGetMin</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808243"><span
+lang=RO>nGetMax</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808244"><span
+lang=RO>nGetRand</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808245"><span
+lang=RO>20.Mesh</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808246"><span
+lang=RO>nCreateMeshNull</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808247"><span
+lang=RO>nCreateMeshCube</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808248"><span
+lang=RO>nCreateMeshSphere</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808249"><span
+lang=RO>nCreateMeshCylinder</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808250"><span
+lang=RO>nCreateMeshCone</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808251"><span
+lang=RO>nCreateMeshPlane</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808252"><span
+lang=RO>nCreateMeshWater</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808253"><span
+lang=RO>nLoadMesh</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808254"><span
+lang=RO>nSetMeshCastShadow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808255"><span
+lang=RO>nDrawOutlineMesh</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808256"><span
+lang=RO>nSetMeshScale</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808257"><span
+lang=RO>nAnimateMesh</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808258"><span
+lang=RO>nGetMeshesCollide</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808259"><span
+lang=RO>nGetVertexCount</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808260"><span
+lang=RO>nGetCurrentFrame</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808261"><span
+lang=RO>nGetStartFrame</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808262"><span
+lang=RO>nGetEndFrame</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808263"><span
+lang=RO>nGetChildrenCount</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808264"><span
+lang=RO>nGetChildByName</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808265"><span
+lang=RO>nGetChildByIndex</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808266"><span
+lang=RO>nGetChildName</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808267"><span
+lang=RO>nSetChildMode</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808268"><span
+lang=RO>21.Particles</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808269">21.1.Particles</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808270"><span
+lang=RO>nCreateParticle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808271"><span
+lang=RO>nSetParticleEndSize</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808272"><span
+lang=RO>nSetParticleGravity</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808273"><span
+lang=RO>21.2.Global emitter functions</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808274"><span
+lang=RO>nSetEmitterDirection</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808275"><span
+lang=RO>nSetEmitterPPS</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808276"><span
+lang=RO>nSetEmitterStartColor</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808277"><span
+lang=RO>nSetEmitterStartSize</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808278"><span
+lang=RO>21.3.Box Emitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808279"><span
+lang=RO>nCreateBoxEmitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808280"><span
+lang=RO>nSetBoxEmitterSize</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808281"><span
+lang=RO>21.4.Cylinder Emitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808282"><span
+lang=RO>nCreateCylinderEmitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808283"><span
+lang=RO>nSetCylinderEmitterCenter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808284"><span
+lang=RO>nSetCylinderEmitterRadius</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808285"><span
+lang=RO>nSetCylinderEmitterLength</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808286"><span
+lang=RO>21.5.Mesh Emitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808287"><span
+lang=RO>nCreateMeshEmitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808288"><span
+lang=RO>nSetMeshEmitterMesh</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808289"><span
+lang=RO>nSetMeshEmitterEveryVertex</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808290"><span
+lang=RO>21.6.Ring Emitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808291"><span
+lang=RO>nCreateRingEmitter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808292"><span
+lang=RO>nSetRingEmitterCenter</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808293"><span
+lang=RO>nSetRingEmitterRadius</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808294"><span
+lang=RO>nSetRingEmitterThickness</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808295"><span
+lang=RO>22.Physics</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808296"><span
+lang=RO>22.1.World</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808297"><span
+lang=RO>nSetPhysicQuality</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808298"><span
+lang=RO>nSetWorldGravity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808299"><span
+lang=RO>nSetWorldSize</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808300"><span
+lang=RO>nWorldMousePick</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808301"><span
+lang=RO>22.2.Body</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808302"><span
+lang=RO>nCreateBodyNull</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808303"><span
+lang=RO>nCreateBodyCube</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808304"><span
+lang=RO>nCreateBodySphere</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808305"><span
+lang=RO>nCreateBodyCylinder</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808306"><span
+lang=RO>nCreateBodyCone</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808307"><span
+lang=RO>nCreateBodyCapsule</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808308"><span
+lang=RO>nCreateBodyHull</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808309"><span
+lang=RO>nCreateBodyTree</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808310"><span
+lang=RO>nCreateBodyTreeBSP</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808311"><span
+lang=RO>nCreateBodyTerrain</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808312"><span
+lang=RO>nCreateBodyWater</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808313"><span
+lang=RO>nSetAngularVelocity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808314"><span
+lang=RO>nLinearVelocity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808315"><span
+lang=RO>nSetLinearVelocity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808316"><span
+lang=RO>nSetLinearDamping</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808317"><span
+lang=RO>nSetAngularDamping</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808318"><span
+lang=RO>nAddImpulse</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808319"><span
+lang=RO>nGetBodiesCollide</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808320"><span
+lang=RO>nGetBodyCollX</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808321"><span
+lang=RO>nGetBodyCollY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808322"><span
+lang=RO>nGetBodyCollZ</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808323"><span
+lang=RO>nGetBodyCollNX</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808324"><span
+lang=RO>nGetBodyCollNY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808325"><span
+lang=RO>nGetBodyCollNZ</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808326"><span
+lang=RO>nDrawBody</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808327"><span
+lang=RO>nSetBodyCenterOfMass</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808328"><span
+lang=RO>nRemoveBody</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808329"><span
+lang=RO>nSetBodyMass</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808330"><span
+lang=RO>22.3.Joints</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808331"><span
+lang=RO>nCreateJointBall</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808332"><span
+lang=RO>nCreateJointHinge</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808333"><span
+lang=RO>nCreateJointSlider</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808334"><span
+lang=RO>nCreateJointUpVector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808335"><span
+lang=RO>nCreateJointCorkscrew</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808336"><span
+lang=RO>nCreateJointGear</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808337"><span
+lang=RO>nCreateJointWormGear</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808338"><span
+lang=RO>nRemoveJoint</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808339"><span
+lang=RO>nSetJointCollisionState</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808340"><span
+lang=RO>nSetBallLimits</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808341"><span
+lang=RO>nSetHingeLimits</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808342"><span
+lang=RO>nSetSliderLimits</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808343"><span
+lang=RO>nSetCorkScrewLinearLimits</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808344"><span
+lang=RO>nSetCorkScrewAngularLimits</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808345"><span
+lang=RO>22.4.Vehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808346"><span
+lang=RO>nCreateVehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808347"><span
+lang=RO>nGetVehicleSpeed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808348"><span
+lang=RO>nAddTireVehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808349"><span
+lang=RO>nApplyBrakeVehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808350"><span
+lang=RO>nApplySteeringVehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808351"><span
+lang=RO>nApplySteeringJoystickVehicle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808352"><span
+lang=RO>nApplyTorqueVehicle</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808353"><span
+lang=RO>23.Shaders</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808354"><span
+lang=RO>nLoadShader</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808355"><span
+lang=RO>nApplyShadersEntity</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808356"><span
+lang=RO>nApplyShadersMaterial</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808357"><span
+lang=RO>nSetVertexShaderConstant</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808358"><span
+lang=RO>nSetPixelShaderConstant</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808359"><span
+lang=RO>nSetMatrixToVertexShaderConstant</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808360"><span
+lang=RO>24.Sky</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808361"><span
+lang=RO>nCreateSkyDome</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808362"><span
+lang=RO>nCreateSkyBox</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808363"><span
+lang=RO>25.Sound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808364"><span
+lang=RO>nLoadSound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808365"><span
+lang=RO>nSetSoundType</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808366"><span
+lang=RO>nSetSoundVolume</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808367"><span
+lang=RO>nSetSoundPitch</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808368"><span
+lang=RO>nPlaySound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808369"><span
+lang=RO>nStopSound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808370"><span
+lang=RO>nPauseSound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808371"><span
+lang=RO>nLoopSound</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808372"><span
+lang=RO>nSetSoundPosition</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808373"><span
+lang=RO>nSetSoundReferenceDistance</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808374"><span
+lang=RO>nSetSoundRollOff</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808375"><span
+lang=RO>nSetListenerPosition</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808376"><span
+lang=RO>26.System</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808377"><span
+lang=RO>nSetAppTitle</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808378"><span
+lang=RO>nGetSupportGLSL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808379"><span
+lang=RO>nGetSupportHLSL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808380"><span
+lang=RO>nGetSupportHardwareTL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808381"><span
+lang=RO>nGetAvailableMemory</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808382"><span
+lang=RO>nGetTotalMemory</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808383"><span
+lang=RO>nGetVideoModeCount</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808384"><span
+lang=RO>nGetVideoModeDepth</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808385"><span
+lang=RO>nGetVideoModeResolutionWidth</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808386"><span
+lang=RO>nGetVideoModeResolutionHeight</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808387"><span
+lang=RO>nGetSupportStencilBuffer</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808388"><span
+lang=RO>nGetSupportMultiTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808389"><span
+lang=RO>nGetSupportARB</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808390"><span
+lang=RO>nGetProcessorSpeed</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808391">27.Terrain</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808392">nLoadTerrain</a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808393"><span
+lang=RO>nSetScaleTerrainTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808394"><span
+lang=RO>nGetTerrainHeight</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808395"><span
+lang=RO>28.Texture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808396"><span
+lang=RO>nLoadTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808397"><span
+lang=RO>nCreateRTT</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808398"><span
+lang=RO>nSetRenderTarget</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808399"><span
+lang=RO>nSetColorKeyTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808400"><span
+lang=RO>nFindTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808401"><span
+lang=RO>nGetTextureWidth</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808402"><span
+lang=RO>nGetTextureHeight</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808403"><span
+lang=RO>nLockTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808404"><span
+lang=RO>nUnLockTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808405"><span
+lang=RO>nUnLockTextureNoMipMap</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808406"><span
+lang=RO>nCreateTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808407"><span
+lang=RO>nRemoveTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808408"><span
+lang=RO>nMakeNormalMapTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808409"><span
+lang=RO>nBlendTextures</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808410"><span
+lang=RO>nAlphaBlendTextures</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808411"><span
+lang=RO>nCreateTextureFromImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808412"><span
+lang=RO>nCreateImageFromTexture</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808413"><span
+lang=RO>nPaintTileTextureWithAlpha</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808414"><span
+lang=RO>nPaintTileTextureWithAlpha2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808415"><span
+lang=RO>nPaintTileTextureWithAlpha3</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808416"><span
+lang=RO>29.Timer</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808417"><span
+lang=RO>nCreateTimer</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808418"><span
+lang=RO>nTimerStart</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808419"><span
+lang=RO>nTimerStop</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808420"><span
+lang=RO>nSetTimerSpeed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808421"><span
+lang=RO>nGetTimerSpeed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808422"><span
+lang=RO>nSetCurrentTime</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808423"><span
+lang=RO>nGetCurrentTimeInMs</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808424"><span
+lang=RO>nGetCurrentTimeInSeconds</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808425"><span
+lang=RO>nGetRealTimeInMs</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808426"><span
+lang=RO>nGetTimerIsStopped</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808427"><span
+lang=RO>nTimerTick</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808428"><span
+lang=RO>30. ForceFeedback Joystick</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808429"><span
+lang=RO>initforce</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808430"><span
+lang=RO>setjoy</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808431"><span
+lang=RO>runeff</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808432"><span
+lang=RO>loadeff</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808433"><span
+lang=RO>runloadedeff</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808434"><span
+lang=RO>stopforce</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808435"><span
+lang=RO>releaseforce</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808436"><span
+lang=RO>31. GUI</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808437"><span
+lang=RO>31.1. Button</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808438"><span
+lang=RO>nCreateGUIButton</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808439"><span
+lang=RO>nCreateGUIButtonToolTip</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808440"><span
+lang=RO>nSetIsPushButton</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808441"><span
+lang=RO>nSetPressed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808442"><span
+lang=RO>nSetButtonImageNormal</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808443"><span
+lang=RO>nSetButtonImagePressed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808444"><span
+lang=RO>nSetScaleImage</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808445"><span
+lang=RO>nGetButtonIsPressed</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808446"><span
+lang=RO>nButtonDrawBorder</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808447"><span
+lang=RO>nDeleteButton</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808448"><span
+lang=RO>31.2. ScrollBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808449"><span
+lang=RO>nCreateGUIScrollBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808450"><span
+lang=RO>nSetScrollBarPosition</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808451"><span
+lang=RO>nSetScrollBarSmallStep</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808452"><span
+lang=RO>nSetScrollBarLargeStep</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808453"><span
+lang=RO>nSetMaxScrollBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808454"><span
+lang=RO>nSetMinScrollBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808455"><span
+lang=RO>nGetScrollBarXY</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808456"><span
+lang=RO>nDeleteScrollBar</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808457"><span
+lang=RO>31.3. Window</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808458"><span
+lang=RO>nCreateGUIWindow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808459"><span
+lang=RO>nDeleteWindow</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808460"><span
+lang=RO>31.4. FileOpenDialog</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808461"><span
+lang=RO>nCreateFileOpenDialog</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808462"><span
+lang=RO>nGetFileNameFromDialog</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808463"><span
+lang=RO>nGetDirectoryNameFromDialog</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808464"><span
+lang=RO>31.5. MessageBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808465"><span
+lang=RO>nCreateGUIMessageBox</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808466"><span
+lang=RO>31.6. CheckBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808467"><span
+lang=RO>nCreateGUICheckBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808468"><span
+lang=RO>nSetCheckBoxEnable</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808469"><span
+lang=RO>nSetCheckBoxChecked</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808470"><span
+lang=RO>nGetCheckBoxIsChecked</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808471"><span
+lang=RO>31.7. EditBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808472"><span
+lang=RO>nCreateEditBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808473"><span
+lang=RO>nSetTextEditBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808474"><span
+lang=RO>nGetTextEditBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808475"><span
+lang=RO>nSetEditBoxTextAlignment</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808476"><span
+lang=RO>31.8. StaticText</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808477"><span
+lang=RO>nAddStaticText</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808478"><span
+lang=RO>nSetStaticTextAlignment</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808479"><span
+lang=RO>31.9. Menu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808480"><span
+lang=RO>nAddMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808481"><span
+lang=RO>nAddItemToMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808482"><span
+lang=RO>nAddSeparatorToMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808483"><span
+lang=RO>nGetSelectedItem</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808484"><span
+lang=RO>nGetItemCommandId</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808485"><span
+lang=RO>nGetSubMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808486"><span
+lang=RO>nAddContextMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808487"><span
+lang=RO>nSetVisibleContextMenu</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808488"><span
+lang=RO>nSetCloseHandlingContextMenu</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808489"><span
+lang=RO>31.10. ToolBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808490"><span
+lang=RO>nAddToolBar</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808491"><span
+lang=RO>nAddButtonToToolBar</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808492"><span
+lang=RO>31.11. TabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808493"><span
+lang=RO>nAddTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808494"><span
+lang=RO>nAddTabInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808495"><span
+lang=RO>nGetNrTabsInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808496"><span
+lang=RO>nGetActiveTabInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808497"><span
+lang=RO>nSetActiveTabByIndexInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808498"><span
+lang=RO>nSetActiveTabByNameInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808499"><span
+lang=RO>nGetPointToTabInTabControl</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808500"><span
+lang=RO>nSetTabHeight</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808501"><span
+lang=RO>31.12. Image GUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808502"><span
+lang=RO>nAddImageGUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808503"><span
+lang=RO>nSetImageGUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808504"><span
+lang=RO>nSetColorImageGUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808505"><span
+lang=RO>nSetScaleImageGUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808506"><span
+lang=RO>nSetUseAlphaChannelImageGUI</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808507"><span
+lang=RO>31.13. ComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808508"><span
+lang=RO>nAddComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808509"><span
+lang=RO>nAddItemComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808510"><span
+lang=RO>nGetItemCountComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808511"><span
+lang=RO>nGetStringItemComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808512"><span
+lang=RO>nGetSelectedItemComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808513"><span
+lang=RO>nSetSelectedItemComboBox</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808514"><span
+lang=RO>nRemoveComboBox</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808515"><span
+lang=RO>31.14. Global GUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808516"><span
+lang=RO>nSetTransparencyGUI</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808517"><span
+lang=RO>nSetVisibleGUIElement</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808518"><span
+lang=RO>nDrawGUI</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="help.htm#_Toc297808519"><span
+lang=RO>32. Terrain Editor Commands</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808520"><span
+lang=RO>nWriteImageToFile</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808521"><span
+lang=RO>nWriteImageSplatToFile</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808522"><span
+lang=RO>nPaintSplatOGL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808523"><span
+lang=RO>nPaintLightMap</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808524"><span
+lang=RO>nInterpolateLightMap</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808525"><span
+lang=RO>nClearLightMap</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808526"><span
+lang=RO>nCreateSplatManagerOGL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808527"><span
+lang=RO>nBindSplatManagerOGLwithTerrain2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808528"><span
+lang=RO>nDrawSplatOGL</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808529"><span
+lang=RO>nCreateSplatManagerDX9</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808530"><span
+lang=RO>nBindSplatManagerDX9withTerrain2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808531"><span
+lang=RO>nDrawSplatDX9</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808532"><span
+lang=RO>nGetTerrainSelector</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808533"><span
+lang=RO>nCreateArrow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808534"><span
+lang=RO>nGetXPoSArrow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808535"><span
+lang=RO>nGetZPoSArrow</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808536"><span
+lang=RO>nGetTerrainVerticesEntry</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808537"><span
+lang=RO>nSetHeightTerrainVerticesGroup2</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="help.htm#_Toc297808538"><span
+lang=RO>nSaveTerrainHM</span></a></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -5,6 +5,8 @@
 ' Revision 4, 2015-01-15
 ' 
 
+#pragma once
+
 #include "crt.bi"
 
  '// ERROR constants

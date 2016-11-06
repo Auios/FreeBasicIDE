@@ -37,11 +37,6 @@
   #endif
 #endif
 
-#ifndef true
-#define true 1
-#define false 0
-#endif
-
 const NOBLOCK = true
 
 #ifdef __FB_WIN32__
