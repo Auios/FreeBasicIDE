@@ -1,0 +1,31 @@
+/* XPM */
+static char *door_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #b46a24",
+". c #f4cd39",
+"# c None",
+"a c #c09835",
+"b c #f9e96e",
+"c c #edab19",
+"d c #c18130",
+"e c #c3aa43",
+/* pixels */
+"################",
+"#####eaaaade####",
+"####e..bbb.ce###",
+"####a..bbb.c`###",
+"####dc.bb.cdd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####d.bbbb.cd###",
+"####dc.bb.cd`###",
+"####ec.bb.cda###",
+"#####eeeeaae####",
+"################"
+};

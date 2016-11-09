@@ -1,0 +1,31 @@
+/* XPM */
+static char *annotate_removeall_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #5a4953",
+". c #c5b478",
+"# c #82747a",
+"a c #fcee5c",
+"b c #bf3f3f",
+"c c #e46264",
+"d c None",
+"e c #d4cdaa",
+/* pixels */
+"ddde##eddddddddd",
+"ddd#dd#ddddddddd",
+"..e#e##e.......d",
+".d`#####dddddd.d",
+"...e#e##........",
+"..d`#d##edddddd.",
+"..d`#d##edddddd.",
+"..a`#a##edaadaa.",
+"..a``a#`eaaaaaa.",
+"..a`a`a`ebbbabbb",
+"..a`aaa`ebcbabcb",
+"..aa.`..abbcbcbb",
+"..aaa..aaabbbbbd",
+"d.aaaaaaabbbbbbb",
+"d........bbb#bbb",
+"dddddddddbbbdbbb"
+};

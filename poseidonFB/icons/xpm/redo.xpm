@@ -1,0 +1,31 @@
+/* XPM */
+static char *redo_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #bc8214",
+"# c #e0d094",
+"a c #fcea9c",
+"b c #c4ae6c",
+"c c #ac7214",
+"d c #fcfefc",
+"e c #b4964c",
+/* pixels */
+"````````````````",
+"`#.#````````````",
+"`.#b````..``````",
+"`.d.````.d.`````",
+"`.d#.```.dd.````",
+"`b#d#..b.ddd.```",
+"`b#ddd##ddddd.``",
+"`#baaaaaaaaaaa.`",
+"``c#aaaaaaaaaaac",
+"``#caaaaaaaaaac`",
+"```#cbaaaaaaac``",
+"`````#eccaaac```",
+"````````caac````",
+"````````cac`````",
+"````````cc``````",
+"````````````````"
+};

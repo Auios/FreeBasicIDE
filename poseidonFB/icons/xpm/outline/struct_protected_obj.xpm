@@ -1,0 +1,39 @@
+/* XPM */
+static char* struct_protected_obj_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16       16            1",
+/* colors */
+"` c None",
+". c #3c9dbb",
+"# c #af8720",
+"a c #ffce6c",
+"b c #bb9a28",
+"c c #ffed9f",
+"d c #3c5e9c",
+"e c #ffdf8d",
+"f c #9cbebc",
+"g c #a47e1c",
+"h c #3c3e9c",
+"i c #ffffff",
+"j c #3c7ebc",
+"k c #4cb6dc",
+"l c #5c7ebc",
+"m c #ffda8c",
+/* pixels */
+"````````````````",
+"````````````````",
+"`````fjdddjf````",
+"````djj...jjd```",
+"```dl.......ld``",
+"``fj..kiiik..jf`",
+"``jj..ik.ki..jj`",
+"``d...ik......d`",
+"``d...kiiikbb.h`",
+"``d......kbccbd`",
+"``jj..ik.bccccb`",
+"``fj..kibceeeecb",
+"```dl...#maaaam#",
+"````djj..#eeee#`",
+"`````fjdhd#ee#``",
+"```````````gg```"
+};

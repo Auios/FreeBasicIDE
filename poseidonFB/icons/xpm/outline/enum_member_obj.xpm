@@ -1,0 +1,31 @@
+/* XPM */
+static char *enum_member_obj_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #8e5c24",
+". c #bea181",
+"# c #93632d",
+"a c #9e7343",
+"b c None",
+"c c #000000",
+"d c #000000",
+"e c #000000",
+/* pixels */
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbb````bbbbbb",
+"bbbbb`....#bbbbb",
+"bbbb`.....a`bbbb",
+"bbbb`.....a`bbbb",
+"bbbb`.....a`bbbb",
+"bbbb`....aa`bbbb",
+"bbbbb`aaaa`bbbbb",
+"bbbbbb````bbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb"
+};

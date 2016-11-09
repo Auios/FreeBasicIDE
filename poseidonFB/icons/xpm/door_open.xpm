@@ -1,0 +1,31 @@
+/* XPM */
+static char *door_open_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #b46a24",
+". c #f3cd38",
+"# c #c09835",
+"a c None",
+"b c #f9e96d",
+"c c #ecaa18",
+"d c #c3812e",
+"e c #c3aa43",
+/* pixels */
+"aaaaae####deaaaa",
+"aaaae..bbb.ceaaa",
+"aaaa#c.bb.cd`aaa",
+"aaaaa.bbbb.caaaa",
+"aaaaaaaaaaaaaaaa",
+"aaaadc.bb.cddaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaad.bbbb.cdaaa",
+"aaaadc.bb.cd`aaa",
+"aaaaec.bb.cd#aaa",
+"aaaaaeeee##eaaaa"
+};

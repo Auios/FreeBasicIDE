@@ -1,0 +1,31 @@
+/* XPM */
+static char *prjexplorer_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #040284",
+". c #bcbe9c",
+"# c #4e3e4a",
+"a c None",
+"b c #7c5e3c",
+"c c #fcde7c",
+"d c #dcdebc",
+"e c #5c5e5c",
+/* pixels */
+"a..ded..........",
+"a.aa#aaaaaaaaaa.",
+"a.aa#aaabbbb#aa.",
+"a.aa#aaabcbc#aa.",
+"a.aa`##ebbbb#aa.",
+"a.aa#aaabcbc#aa.",
+"a.aa#aaab####aa.",
+"a.aa#aaaaaaaaaa.",
+"a.aa#aaabbbb#aa.",
+"a.aa#aaabcbc#aa.",
+"a.aa`##ebbbb#aa.",
+"a.aaeaaabcbc#aa.",
+"a.aaeaaab####aa.",
+"a.aaeaaaaaaaaaa.",
+"a..ded..........",
+"aaaaaaaaaaaaaaaa"
+};

@@ -1,0 +1,31 @@
+/* XPM */
+static char *findprev_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #bd8d31",
+"# c #f2d78e",
+"a c #fbf5c8",
+"b c #d6af80",
+"c c #4c6ea4",
+"d c #9f7131",
+"e c #b09a89",
+/* pixels */
+"`````````..`````",
+"beedb```.a.`````",
+"ebaabb`.#a...```",
+"e#aca#.#aaaa#.``",
+"d##acad#aaaaa#.`",
+"bb##aaad##dd##d`",
+"`bb##aa#d#d`d#d`",
+"``bb##dbadd.`d``",
+"```bbdebbaa#.```",
+"````bdeebbb...``",
+"`````deeeb.aab``",
+"`````deeedaaaab`",
+"``````dedaaaaaab",
+"```````ddaaaaaa#",
+"````````d#aaaaa#",
+"````````````````"
+};

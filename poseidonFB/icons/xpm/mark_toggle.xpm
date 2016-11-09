@@ -1,0 +1,31 @@
+/* XPM */
+static char *mark_toggle_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #000080",
+". c #0000ff",
+"# c #183050",
+"a c #a8a098",
+"b c None",
+"c c #000000",
+"d c #000000",
+"e c #000000",
+/* pixels */
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb",
+"bbbbbbbbbbbb#bbb",
+"bbbbbbbbbbb#bbbb",
+"bbbbbbbbbb##bbbb",
+"bbbbbbbbb#..#bbb",
+"bbbbbbbb#...#bbb",
+"bbbbbbb#...`#bbb",
+"bbbbbb##..```##b",
+"bbbbb#bb#````..#",
+"bbbb#bbb#```...#",
+"bbb#bbbb#``...#b",
+"bb#bbbbbb##..#bb",
+"b#bbbbbbbba##bbb",
+"#bbbbbbbbbbbbbbb",
+"bbbbbbbbbbbbbbbb"
+};

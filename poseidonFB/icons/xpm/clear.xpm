@@ -1,0 +1,31 @@
+/* XPM */
+static char *clear_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #bc8214",
+"# c #f4e4c0",
+"a c #fcf4e2",
+"b c #fceccf",
+"c c #fcfaf4",
+"d c #fcf6ec",
+"e c #fceedc",
+/* pixels */
+"````````````````",
+"````..`````..```",
+"```.cc.```.cc.``",
+"``.dddd.`.dddd.`",
+"`.aaaaaa.aaaaaa.",
+"``.aaaaaaaaaaa.`",
+"```.aaaaaaaaa.``",
+"````.ebbbbbb.```",
+"````.bbbbbbb.```",
+"```.bbbbbbbbb.``",
+"``.bbbbbbbbbbb.`",
+"`.######.######.",
+"``.####.`.####.`",
+"```.##.```.##.``",
+"````..`````..```",
+"````````````````"
+};

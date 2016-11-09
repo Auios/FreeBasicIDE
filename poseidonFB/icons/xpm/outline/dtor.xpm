@@ -1,0 +1,31 @@
+/* XPM */
+static char *dtor_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #76130c",
+"# c #9f140f",
+"a c #c42115",
+"b c #ffffff",
+"c c #f4a9a8",
+"d c #000000",
+"e c #000000",
+/* pixels */
+"````````````````",
+"````````````````",
+"``.............`",
+"``.###########.`",
+"``.#aaaaaaaaa#.`",
+"``.#aabbbbaaa#.`",
+"``.#aabcccbaa#.`",
+"``.#aabcaabaa#.`",
+"``.#aabcaabaa#.`",
+"``.#aabcaabaa#.`",
+"``.#aabcccbaa#.`",
+"``.#aabbbbaaa#.`",
+"``.#aaaaaaaaa#.`",
+"``.###########.`",
+"``.............`",
+"````````````````"
+};

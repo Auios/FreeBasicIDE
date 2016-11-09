@@ -1,0 +1,31 @@
+/* XPM */
+static char *windows_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #4b89c3",
+". c #90be90",
+"# c #f0c538",
+"a c None",
+"b c #e75931",
+"c c #e9944d",
+"d c #7b9966",
+"e c #d3c2a4",
+/* pixels */
+"aaaaaaaaaaaaaaaa",
+"aaaae#cccaaaaaaa",
+"aaaecccbbeaaaaaa",
+"aaac#cbbbed.ee..",
+"aaacccbbc.d....e",
+"aaec#cbbcd.....a",
+"aaeeeeeced.....a",
+"aa...``eed....ea",
+"aa`..``deeeeeeaa",
+"a...```ec#####aa",
+"a...```ec####eaa",
+"a`..``dcc####eaa",
+"aeaaa.ec#####aaa",
+"aaaaaaae####eaaa",
+"aaaaaaaaaeaaaaaa",
+"aaaaaaaaaaaaaaaa"
+};

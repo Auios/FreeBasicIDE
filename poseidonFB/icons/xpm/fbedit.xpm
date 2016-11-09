@@ -1,0 +1,31 @@
+/* XPM */
+static char *fbedit_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c #0a0a0a",
+". c #8e8d8d",
+"# c #d3d3d0",
+"a c #50524f",
+"b c #71716e",
+"c c #b4b5b4",
+"d c #313031",
+"e c #f2f1f2",
+/* pixels */
+"....````````````",
+".``.````````````",
+"............a...",
+".ee.cdddcddcabdd",
+"....cccdcccbacc.",
+".ee.#dda#dd#b.da",
+"....eaabe##eb###",
+".##.babbbaaaaaaa",
+".....b...bbb.bbb",
+".##.............",
+"....ccccccccc.b.",
+".##.ccccccccc.a.",
+"....#####c.c.abc",
+".cc.#####c..b.##",
+"....eeeee#.ab#ee",
+".``.eeeeeeec#eee"
+};

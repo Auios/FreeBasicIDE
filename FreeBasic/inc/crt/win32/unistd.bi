@@ -12,7 +12,7 @@
 #include "crt/io.bi"
 #include "crt/process.bi"
 
-#include "crt/getopt.bi"
+'#include "crt/getopt.bi"
 
 #ifndef	SEEK_SET
 #define SEEK_SET 0

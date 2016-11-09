@@ -1,0 +1,31 @@
+/* XPM */
+static char *annotatehide_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #7c7674",
+"# c #8c8a7c",
+"a c #9c9674",
+"b c #848079",
+"c c #9c9a9c",
+"d c #949274",
+"e c #8c8e84",
+/* pixels */
+"````````````````",
+"````````````````",
+"````ebbe````````",
+"````bccb````````",
+"`eeebebb#eeeeeee",
+"`ec.bcbbdcccccce",
+"`ec..cb.dcccccce",
+"`ea..ab.daaaaaae",
+"`ea..ab.daaaaaae",
+"`#a.a.a.daaaaaa#",
+"`#a.aaa.daaaaaa#",
+"`#aa#.#daaaa##bb",
+"`#aaaddaaaaa#bb`",
+"`#aaaaaaaaaa#b``",
+"`###########b```",
+"````````````````"
+};

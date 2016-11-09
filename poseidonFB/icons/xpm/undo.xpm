@@ -1,0 +1,31 @@
+/* XPM */
+static char *undo_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+"` c None",
+". c #bc8214",
+"# c #d4c28c",
+"a c #fce89f",
+"b c #fcfefc",
+"c c #ac7214",
+"d c #c4a66c",
+"e c #e4d694",
+/* pixels */
+"````````````````",
+"`````````````e.#",
+"```````..````da.",
+"``````.b.````.b.",
+"`````.bb.```.ab.",
+"````.bbb.#..ebad",
+"```.bbbbbeebbbed",
+"``.aaaaaaaaaaad#",
+"`.aaaaaaaaaaae.`",
+"``caaaaaaaaaac#`",
+"```caaaaaaa#c#``",
+"````caaaccd#````",
+"`````caac```````",
+"``````cac```````",
+"```````cc```````",
+"````````````````"
+};
