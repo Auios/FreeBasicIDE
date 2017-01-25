@@ -3,10 +3,6 @@
 
 #include "aulib/AuWindow.bi"
 #include "aulib/AuMouse.bi"
-'include "aulib/augui.bi" 'WIP
-'include "aulib/auvec.bi"
-'include "aulib/AuFile.bi" 'WIP
-'include "aulib/aucnsl2.bi"
-'include "aulib/augfx.bi"
+#include "aulib/AuFile.bi"
 
 #endif
