@@ -1,5 +1,5 @@
 [Project]
-Version=2
+Version=3
 Description=Alien Invaders
 Api=fb (FreeBASIC),win (Windows)
 Grouping=2
@@ -19,6 +19,11 @@ Run=
 3=Alien.Rc
 4=Res\Alien.bmp
 [FileInfo]
-1=0,6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-2=0,24,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1=0,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2=0,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3=0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[TabOrder]
+TabOrder=1,2,3
+[BreakPoint]
+1=
+2=
