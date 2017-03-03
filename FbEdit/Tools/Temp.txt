@@ -1,4 +1,0 @@
-Function Add(a As Integer, b As Integer) As Integer
-end function
-Function Add(a As Integer, b As Integer) As Integer
-end function
