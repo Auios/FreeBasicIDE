@@ -5,12 +5,22 @@
 #define GfxResize
 namespace gfx
   dim shared as long lOrgFbProc
+  dim shared as integer iScrWid,iScrHei
   function FbSubClass(hwnd as hwnd,iMsg as integer,wparam as wparam,lparam as lparam) as lresult
-    select case iMsg    
-    case WM_MOUSEMOVE,WM_NCHITTEST,WM_NCMOUSEMOVE,12,174,32
-      return DefWindowProc(hwnd,imsg,wparam,lparam)
+    select case iMsg
+    case WM_MOUSEMOVE      
+      var xPos = cshort(LOWORD(lParam)),yPos = cshort(HIWORD(lParam))      
+      dim as rect fbcli = any: GetClientRect(hwnd,@fbcli)            
+      xPos = cshort((xPos*iScrWid)\fbcli.Right)
+      yPos = cshort((yPos*iScrHei)\fbcli.Bottom)
+      'SetWindowText(hwnd,"Ok = " & iScrWid & "x" & iScrHei & " - " & fbcli.right & "x" & fbcli.bottom & " - " & xPos & "," & yPos)
+      lParam = MAKELONG(cushort(xPos),cushort(yPos))
+    case WM_NCHITTEST,WM_NCMOUSEMOVE,12,174,32      
+      '
     case WM_GETMINMAXINFO,WM_SIZE
       return DefWindowProc(hwnd,imsg,wparam,lparam)
+    case WM_DESTROY,WM_CLOSE
+      'return 0
     case else
       'printf "%i(%x) ",iMsg,iMsg
     end select    
@@ -21,6 +31,7 @@ namespace gfx
     static iDeskWid as integer,iDeskHei as integer    
     dim as hwnd newWnd
     Screencontrol(fb.get_window_handle,*cast(ulong ptr,@newWnd))      
+    screeninfo iScrWid,iScrHei
     if newWnd<>fbWnd then
       fbWnd = newWnd
       lOrgFbProc = SetWindowLong(fbWnd,GWL_WNDPROC,clng(@FbSubClass))              
@@ -32,17 +43,18 @@ namespace gfx
     var iSx = ((fbrct.right-fbrct.left)-(fbcli.right-fbcli.left))+iWid
     var iSy = ((fbrct.bottom-fbrct.top)-(fbcli.bottom-fbcli.top))+iHei    
     var iLeft = (iDeskWid-iSx)\2, iTop = (iDeskHei-iSy)\2
+    var iFlags = iif(iCenter,0,SWP_NOMOVE) or SWP_SHOWWINDOW or SWP_NOZORDER
     if iWid=0 or iHei=0 then 
       iSx = GetSystemMetrics(SM_CXSCREEN)
       iSy = GetSystemMetrics(SM_CYSCREEN)      
       iCenter=1 : iLeft=0 : iTop=0
-    end if
-    var iFlags = iif(iCenter,0,SWP_NOMOVE) or SWP_NOZORDER or SWP_SHOWWINDOW   
+    end if    
+    
     'if iWasMax then 
     '  SetWindowPos(fbWnd,null,-640,0,null,null,SWP_NOSIZE or SWP_NOZORDER)
     '  ShowWindow(fbwnd,SW_MAXIMIZE)
     'else
-    SetWindowPos(fbWnd,null,iLeft,iTop,iSx,iSy,iFlags)
+    SetWindowPos(fbWnd,HWND_TOPMOST,iLeft,iTop,iSx,iSy,iFlags)
     'end if
   end sub    
   dim shared PreDetour as any ptr, llDetour as ulongint
@@ -50,6 +62,7 @@ namespace gfx
   sub AutoUnDetour() destructor    
     if PreDetour then PreResize(1)    
   end sub 
+  const NOTVIS = (not WS_VISIBLE)
   sub CreateWindowExADetour naked ()
     asm
       mov eax,[PreDetour]
@@ -57,8 +70,7 @@ namespace gfx
       push 1
       call PreResize
       popa      
-      and dword ptr [esp+16], (not WS_VISIBLE)
-      or dword ptr [esp+16], (WS_THICKFRAME)
+      and dword ptr [esp+16], NOTVIS
       push ebp
       mov ebp,esp
       jmp eax
