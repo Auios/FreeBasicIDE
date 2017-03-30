@@ -4,7 +4,7 @@
 #IFNDEF _AUFILE_BI_
 #DEFINE _AUFILE_BI_
 
-#include "crt.bi"
+#include once "crt.bi"
 
 nameSpace AuLib
     type AuFile

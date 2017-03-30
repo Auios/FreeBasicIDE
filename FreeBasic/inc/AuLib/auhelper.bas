@@ -4,7 +4,7 @@
 #IFNDEF _AUHELPER_BI_
 #DEFINE _AUHELPER_BI_
 
-#include "crt.bi"
+#include once "crt.bi"
 
 nameSpace AuLib
     function getWord(byval text as string, wordIndex as integer, delimiter as string) as string

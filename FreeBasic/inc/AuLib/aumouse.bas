@@ -4,8 +4,8 @@
 #IFNDEF _AULIB_BI_
 #DEFINE _AULIB_BI_
 
-#include "AuHelper.bi"
-#include "crt.bi"
+#include once "AuHelper.bas"
+#include once "crt.bi"
 
 namespace AuLib
     type AuMouse

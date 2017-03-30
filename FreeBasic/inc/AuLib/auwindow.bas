@@ -4,9 +4,9 @@
 #IFNDEF _AUWND_BI_
 #DEFINE _AUWND_BI_
 
-#include "AuHelper.bi"
-#include "crt.bi"
-#include "fbgfx.bi"
+#include once "AuHelper.bas"
+#include once "crt.bi"
+#include once "fbgfx.bi"
 
 nameSpace AuLib
     type AuWindow
