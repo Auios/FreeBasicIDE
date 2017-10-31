@@ -2,14 +2,14 @@
 
 #include once "mysql\mysql.bi"
 
-#define NULL 0	
+#define NULL 0
 
 dim db as MYSQL ptr
 dim dbname as string
 
 db = mysql_init( NULL )
 
-dbname = "Othea"
+dbname = "Telchaxy"
 
 if( mysql_real_connect( db, "localhost", "root", "5018", NULL, MYSQL_PORT, NULL, 0 ) = 0 ) then
     print "Can't connect to the mysql server on port"; MYSQL_PORT
