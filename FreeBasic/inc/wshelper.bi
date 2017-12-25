@@ -91,9 +91,9 @@ end function
 function hOpen( byval proto as integer = IPPROTO_TCP, NonBlocking as uinteger = 0 ) as SOCKET
     dim ts as SOCKET
     dim as integer SockType = SOCK_STREAM
-    if proto <> IPPROTO_TCP then SockType = SOCK_DGRAM  
+    if proto <> IPPROTO_TCP then SockType = SOCK_DGRAM
     #ifdef __FB_WIN32__
-    ts = WSASocket(AF_INET,SockType,proto,null,null,null)    
+    ts = WSASocket(AF_INET,SockType,proto,null,null,null)
     #else
     ts = Socket_(AF_INET,SockType,proto)
     #endif
@@ -162,7 +162,7 @@ function hConnect6 overload (ss as SOCKET, ip as ulongint, port as long, byref L
     
     sa.sin_port         = htons( port )
     sa.sin_family       = AF_INET
-    sa.sin_addr.S_addr  = ip  
+    sa.sin_addr.S_addr  = ip
     
     var iNoDelay = true
     setsockopt(ss,IPPROTO_TCP,TCP_NODELAY,cast(any ptr,@iNoDelay),sizeof(iNoDelay))

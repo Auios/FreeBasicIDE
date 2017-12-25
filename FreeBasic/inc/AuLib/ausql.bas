@@ -1,4 +1,8 @@
+'AuSQL.bi
+'9/15/2017
+
 #include once "mysql\mysql.bi"
+#define NULL 0
 
 type AuSQL
     as string host, user, pass, dbName
@@ -21,17 +25,17 @@ type AuSQL
 end type
 
 function AuSQL.connect(host as string, user as string, pass as string, dbName as string, port as uinteger = 3306, flag as uinteger = 0) as integer
-    this.conn = mysql_init(0)
+    this.conn = mysql_init(NULL)
     this.host = host
     this.user = user
     this.pass = pass
     this.dbName = dbName
     this.port = port
     this.flag = flag
-    if(mysql_real_connect(this.conn, this.host, this.user, this.pass, this.dbName, this.port, 0, this.flag) = 0) then
-        return 1 'Error
+    if(mysql_real_connect(this.conn, this.host, this.user, this.pass, this.dbName, this.port, NULL, this.flag) = NULL) then
+        return 1
     else
-        return 0 'No error
+        return 0
     end if
 end function
 
@@ -66,7 +70,7 @@ end function
 
 function AuSQL.getRow() as integer
     this.row = mysql_fetch_row(this.res)
-    if(row = 0) then
+    if(row = NULL) then
         return 0
     else
         return 1

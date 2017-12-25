@@ -8,55 +8,59 @@
 
 nameSpace AuLib
     type AuFile
-        as ubyte isOpen
-        as long EoF
-        as zstring*2 mode
+        as boolean isOpen
+        as long endOfFile
+        as ubyte mode
         as long fileNumber
         as zstring*255 fileName
+        
+        declare function openRead(fileName as zstring*255) as boolean
+        declare function openWrite(fileName as zstring*255) as boolean
+        declare sub closeFile()
+        declare sub reset()
+        declare function readLine() as string
     end type
     
-    function AuFileOpen(fileName as zstring*255, mode as string) as AuFile
-        dim as ubyte check
-        dim as AuFile file
-        file.fileNumber = freeFile()
-        file.fileName = fileName
-        file.mode = mode
-        if(file.mode = "r") then
-            if(open(file.fileName for input as #file.fileNumber)) then
-                check = 1
-            else
-                file.isOpen = 1
-            end if
-        elseif(file.mode = "w") then
-            if(open(file.fileName for output as #file.fileNumber)) then
-                check = 1
-            else
-                file.isOpen = 1
-            end if
-        end if
-        return file
+    function AuFile.openRead(fileName as zstring*255) as boolean
+        if(this.isOpen) then return false
+        this.fileNumber = freeFile()
+        this.fileName = fileName
+        this.mode = 1
+        if(NOT open(this.fileName for input as #this.fileNumber)) then this.isOpen = true
+        return this.isOpen
     end function
     
-    sub AuFileClose(file as AuFile)
-        if(file.isOpen) then
-            close #file.fileNumber
-            file.isOpen = 0
-            file.fileNumber = 0
+    function AuFile.openWrite(fileName as zstring*255) as boolean
+        if(this.isOpen) then return false
+        this.fileNumber = freeFile()
+        this.fileName = fileName
+        this.mode = 2
+        if(NOT open(this.fileName for output as #this.fileNumber)) then this.isOpen = true
+        return this.isOpen
+    end function
+    
+    sub AuFile.closeFile()
+        if(this.isOpen) then
+            close #this.fileNumber
+            this.isOpen = 0
+            this.fileNumber = 0
+            this.mode = 0
         end if
     end sub
     
-    sub AuFileReset(file as AuFile)
-        if(file.isOpen) then
-            close #file.fileNumber
-            file = AuFileOpen(file.fileName, file.mode)
+    sub AuFile.reset()
+        if(this.isOpen) then
+            close #this.fileNumber
+            if(this.mode = 1) then this.openRead(this.fileName)
+            if(this.mode = 2) then this.openWrite(this.fileName)
         end if
     end sub
     
-    function AuFileReadLine(file as AuFile) as string
+    function AuFile.readLine() as string
         dim as string text
-        if(file.isOpen) then
-            line input #file.fileNumber, text
-            file.EoF = EoF(file.fileNumber)
+        if(this.isOpen) then
+            line input #this.fileNumber, text
+            this.endOfFile = EoF(this.fileNumber)
         end if
         return text
     end function

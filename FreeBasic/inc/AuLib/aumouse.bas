@@ -15,50 +15,57 @@ namespace AuLib
         as long buttons
         as long clip
         as long visible
+        
+        declare sub dump()
+        declare function set(x as long, y as long, visible as long, clip as long) as long
+        declare function get() as integer
+        declare function compare(target as AuMouse) as integer
+        declare function update() as integer
+        declare sub hide()
+        declare sub show()
     end type
     
-    sub AuMouseDump(mouse as AuMouse)
+    sub AuMouse.dump()
         AuLibPrintBar("-",10)
-        printf(!"State---: %d\n", mouse.state)
-        printf(!"X,Y-----: %d,%d\n", mouse.x, mouse.y)
-        printf(!"Wheel---: %d\n", mouse.wheel)
-        printf(!"Buttons-: %d\n", mouse.buttons)
-        printf(!"Clip----: %d\n", mouse.clip)
+        printf(!"State---: %d\n", this.state)
+        printf(!"X,Y-----: %d,%d\n", this.x, this.y)
+        printf(!"Wheel---: %d\n", this.wheel)
+        printf(!"Buttons-: %d\n", this.buttons)
+        printf(!"Clip----: %d\n", this.clip)
     end sub
     
-    function AuMouseSet(x as long, y as long, visible as long, clip as long) as AuMouse
-        dim as AuMouse mouse
+    function AuMouse.set(x as long, y as long, visible as long, clip as long) as long
         dim as long result = setMouse(x,y,visible,clip)
-        mouse.x = x
-        mouse.y = y
-        mouse.visible = visible
-        mouse.clip = clip
-        return mouse
+        this.x = x
+        this.y = y
+        this.visible = visible
+        this.clip = clip
+        return result
     end function
     
-    function AuMouseGet(mouse as AuMouse) as integer
-        mouse.state = getMouse(mouse.x, mouse.y, mouse.wheel, mouse.buttons, mouse.clip)
-        return mouse.state
+    function AuMouse.get() as integer
+        this.state = getMouse(this.x, this.y, this.wheel, this.buttons, this.clip)
+        return this.state
     end function
     
     'Useful for checking if the mouse has moved
-    function AuMouseCompare(mouse1 as AuMouse, mouse2 as AuMouse) as integer
-        return memCmp(@mouse1, @mouse2, sizeof(AuMouse)) 'Return 0 if they are the same
+    function AuMouse.compare(target as AuMouse) as integer
+        return memCmp(@this, @target, sizeof(AuMouse)) 'Return 0 if they are the same
     end function
     
-    function AuMouseUpdate(mouse as AuMouse) as integer
-        mouse.state = getMouse(mouse.x, mouse.y, mouse.wheel, mouse.buttons, mouse.clip)
-        return mouse.state
+    function AuMouse.update() as integer
+        this.state = getMouse(this.x, this.y, this.wheel, this.buttons, this.clip)
+        return this.state
     end function
     
-    sub AuMouseHide(mouse as AuMouse)
-        mouse.visible = 0
-        setMouse(mouse.x, mouse.y, mouse.visible, mouse.clip)
+    sub AuMouse.hide()
+        this.visible = 0
+        setMouse(this.x, this.y, this.visible, this.clip)
     end sub
     
-    sub AuMouseShow(mouse as AuMouse)
-        mouse.visible = 1
-        setMouse(mouse.x, mouse.y, mouse.visible, mouse.clip)
+    sub AuMouse.show()
+        this.visible = 1
+        setMouse(this.x, this.y, this.visible, this.clip)
     end sub
 end namespace
 

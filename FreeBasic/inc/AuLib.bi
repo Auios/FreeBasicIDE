@@ -6,5 +6,6 @@
 #include once "aulib/AuMouse.bas"
 #include once "aulib/AuFile.bas"
 #include once "aulib/AuSQL.bas"
+#include once "aulib/AuList.bas"
 
 #endif
