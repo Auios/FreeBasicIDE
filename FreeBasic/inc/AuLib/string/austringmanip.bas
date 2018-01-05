@@ -1,8 +1,8 @@
-'AuHelper.bi
+'AuStringManip.bi
 '1/22/2017
 
-#IFNDEF _AUHELPER_BI_
-#DEFINE _AUHELPER_BI_
+#IFNDEF _AUSTRINGMANIP_BI_
+#DEFINE _AUSTRINGMANIP_BI_
 
 #include once "crt.bi"
 
@@ -32,7 +32,7 @@ nameSpace AuLib
         return(wordsPassed)
     end function
     
-    sub AuLibPrintBar(charVar as zstring*1, charCount as long)
+    sub printBar(charVar as zstring*1, charCount as long)
         for printCount as integer = 1 to charCount
             printf(!"%s",charVar)
         next printCount

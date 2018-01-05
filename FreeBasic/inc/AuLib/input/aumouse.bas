@@ -4,7 +4,7 @@
 #IFNDEF _AULIB_BI_
 #DEFINE _AULIB_BI_
 
-#include once "AuHelper.bas"
+#include once "../string/austringmanip.bas"
 #include once "crt.bi"
 
 namespace AuLib
@@ -26,7 +26,7 @@ namespace AuLib
     end type
     
     sub AuMouse.dump()
-        AuLibPrintBar("-",10)
+        printBar("-",10)
         printf(!"State---: %d\n", this.state)
         printf(!"X,Y-----: %d,%d\n", this.x, this.y)
         printf(!"Wheel---: %d\n", this.wheel)

@@ -61,10 +61,10 @@ nameSpace AuLib
     end function
     #ENDMACRO
     
-    #macro forEach(_V, _L)
+    #MACRO forEach(_V, _L)
     for i as uinteger = 1 to _L##.count
         dim as typeof(*_L##.item) _V = _L##.item[i-1]
-    #endMacro
+    #ENDMACRO
 end nameSpace
 
 #ENDIF

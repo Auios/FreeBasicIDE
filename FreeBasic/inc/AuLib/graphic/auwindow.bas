@@ -4,7 +4,7 @@
 #IFNDEF _AUWND_BI_
 #DEFINE _AUWND_BI_
 
-#include once "AuHelper.bas"
+#include once "../string/austringmanip.bas"
 #include once "crt.bi"
 #include once "fbgfx.bi"
 
@@ -77,7 +77,7 @@ nameSpace AuLib
     end sub
     
     sub AuWindow.dump(message as zstring*64 = "")
-        AuLibPrintBar("-",10)
+        printBar("-",10)
         if(message <> "") then printf(!"%s\n", message)
         printf(!"Width---: %d\n", this.wdth)
         printf(!"Height--: %d\n", this.hght)
