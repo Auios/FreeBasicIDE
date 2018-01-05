@@ -6,7 +6,7 @@
 
 #include once "crt.bi"
 
-#DEFINE LISTJUMPSIZE 32
+#DEFINE LISTALLOCSIZE 32
 
 nameSpace AuLib
     #MACRO DeclareList(_T)
@@ -23,22 +23,22 @@ nameSpace AuLib
     end type
     
     constructor _T##List
-        item = new _T[LISTJUMPSIZE]
-        allocated = LISTJUMPSIZE
+        item = new _T[LISTALLOCSIZE]
+        allocated = LISTALLOCSIZE
     end constructor
     
     sub _T##List.allocate()
-        allocated+=LISTJUMPSIZE
+        allocated+=LISTALLOCSIZE
         dim as _T ptr temp = new _T[allocated]
-        memmove(temp, item, (allocated-LISTJUMPSIZE)*sizeof(_T))
+        memmove(temp, item, (allocated-LISTALLOCSIZE)*sizeof(_T))
         delete[] item
         item = temp
     end sub
     
     sub _T##List.deallocate()
-        allocated-=LISTJUMPSIZE
+        allocated-=LISTALLOCSIZE
         dim as _T ptr temp = new _T[allocated]
-        memmove(temp, item, (allocated-LISTJUMPSIZE)*sizeof(_T))
+        memmove(temp, item, (allocated-LISTALLOCSIZE)*sizeof(_T))
         delete[] item
         item = temp
     end sub
@@ -53,7 +53,7 @@ nameSpace AuLib
         if(count = 0 OR index > count) then return
         memmove(@cptr(_T ptr,item)[index], @cptr(_T ptr,item)[index+1], sizeof(_T)*(count-index-1))
         count-=1
-        if(count+(LISTJUMPSIZE\2)) < (allocated-LISTJUMPSIZE) then this.deallocate()
+        if(count+(LISTALLOCSIZE\2)) < (allocated-LISTALLOCSIZE) then this.deallocate()
     end sub
     
     function _T##List.length() as uinteger

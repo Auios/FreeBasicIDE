@@ -1,16 +1,16 @@
-'AuStack.bi
+'AuQueue.bi
 '1/5/2018
 
-#IFNDEF _AUSTACK_BI_
-#DEFINE _AUSTACK_BI_
+#IFNDEF _AUQUEUE_BI_
+#DEFINE _AUQUEUE_BI_
 
 #include once "crt.bi"
 
-#DEFINE STACKALLOCSIZE 32
+#DEFINE QUEUEALLOCSIZE 32
 
 nameSpace AuLib
-    #MACRO DeclareStack(_T)
-    type _T##Stack
+    #MACRO DeclareQueue(_T)
+    type _T##Queue
         as uinteger allocated, count
         as _T ptr item
         
@@ -22,41 +22,43 @@ nameSpace AuLib
         declare function length() as uinteger
     end type
     
-    constructor _T##Stack
-        item = new _T[STACKALLOCSIZE]
-        allocated = STACKALLOCSIZE
+    constructor _T##Queue
+        item = new _T[QUEUEALLOCSIZE]
+        allocated = QUEUEALLOCSIZE
     end constructor
     
-    sub _T##Stack.allocate()
-        allocated+=STACKALLOCSIZE
+    sub _T##Queue.allocate()
+        allocated+=QUEUEALLOCSIZE
         dim as _T ptr temp = new _T[allocated]
-        memmove(temp, item, (allocated-STACKALLOCSIZE)*sizeof(_T))
+        memmove(temp, item, (allocated-QUEUEALLOCSIZE)*sizeof(_T))
         delete[] item
         item = temp
     end sub
     
-    sub _T##Stack.deallocate()
-        allocated-=STACKALLOCSIZE
+    sub _T##Queue.deallocate()
+        allocated-=QUEUEALLOCSIZE
         dim as _T ptr temp = new _T[allocated]
-        memmove(temp, item, (allocated-STACKALLOCSIZE)*sizeof(_T))
+        memmove(temp, item, (allocated-QUEUEALLOCSIZE)*sizeof(_T))
         delete[] item
         item = temp
     end sub
     
-    sub _T##Stack.push(newItem as _T)
+    sub _T##Queue.push(newItem as _T)
         if(count >= allocated) then this.allocate()
         count+=1
         item[count-1] = newItem
     end sub
     
-    function _T##Stack.pop() as _T
+    function _T##Queue.pop() as _T
         if(count = 0) then return 0
+        dim as _T ret = item[0]
         count-=1
-        if(count+(STACKALLOCSIZE\2)) < (allocated-STACKALLOCSIZE) then this.deallocate()
-        return item[count+1]
+        memmove(@cptr(_T ptr,item)[0], @cptr(_T ptr,item)[1], sizeof(_T)*(count))
+        if(count+(QUEUEALLOCSIZE\2)) < (allocated-QUEUEALLOCSIZE) then this.deallocate()
+        return ret
     end function
     
-    function _T##Stack.length() as uinteger
+    function _T##Queue.length() as uinteger
         return this.count
     end function
     #ENDMACRO

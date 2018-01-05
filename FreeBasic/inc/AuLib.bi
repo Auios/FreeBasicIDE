@@ -8,5 +8,6 @@
 #include once "aulib/database/AuSQL.bas"
 #include once "aulib/collection/AuList.bas"
 #include once "aulib/collection/AuStack.bas"
+#include once "aulib/collection/AuQueue.bas"
 
 #endif
