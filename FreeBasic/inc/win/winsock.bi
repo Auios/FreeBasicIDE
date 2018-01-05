@@ -22,11 +22,6 @@
 #include once "_bsd_types.bi"
 #include once "inaddr.bi"
 
-#define SD_RECEIVE &h00
-#define SD_SEND &h01
-#define SD_BOTH &h02
-
-
 '' The following symbols have been renamed:
 ''     procedure select => select_
 ''     procedure socket => socket_
@@ -162,18 +157,6 @@ end type
 #define __MINGW_WSADATA_H
 const WSADESCRIPTION_LEN = 256
 const WSASYS_STATUS_LEN = 128
-
-'type WSAData
-'    wVersion as WORD
-'    wHighVersion as WORD
-'    szDescription as zstring * WSADESCRIPTION_LEN+1
-'    szSystemStatus as zstring * WSASYS_STATUS_LEN+1
-'    iMaxSockets as ushort
-'    iMaxUdpDg as ushort
-'    lpVendorInfo as zstring ptr
-'end type
-
-type LPWSADATA as WSADATA ptr
 
 type WSADATA
 	wVersion as WORD

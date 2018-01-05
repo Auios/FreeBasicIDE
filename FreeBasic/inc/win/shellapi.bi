@@ -49,7 +49,7 @@
 #pragma once
 
 #inclib "shell32"
-#include once "windows.bi"
+
 #include once "winapifamily.bi"
 #include once "_mingw_unicode.bi"
 
