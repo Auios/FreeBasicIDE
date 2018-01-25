@@ -23,15 +23,15 @@ nameSpace AuLib
         as zstring*64 title
         as any ptr buffer
         
-        declare sub init(wdth as long = 800, hght as long = 600, depth as long = 32, pages as long = 1, flags as long = 0, title as zstring*64 = "Application")
+        declare sub init(wdth as long = 800, hght as long = 600, depth as long = 32, pages as long = 1, flags as long = 0, title as string = "Application")
         declare sub getSize(byref wdth as long, byref hght as long)
         declare sub show()
         declare sub hide()
         declare sub destroy()
-        declare sub dump(message as zstring*64 = "")
+        declare sub dump(message as string = "")
     end type
     
-    sub AuWindow.init(wdth as long = 800, hght as long = 600, depth as long = 32, pages as long = 1, flags as long = 0, title as zstring*64 = "Application")
+    sub AuWindow.init(wdth as long = 800, hght as long = 600, depth as long = 32, pages as long = 1, flags as long = 0, title as string = "Application")
         this.wdth = wdth
         this.hght = hght
         this.depth = depth
@@ -76,7 +76,7 @@ nameSpace AuLib
         screen(0)
     end sub
     
-    sub AuWindow.dump(message as zstring*64 = "")
+    sub AuWindow.dump(message as string = "")
         printBar("-",10)
         if(message <> "") then printf(!"%s\n", message)
         printf(!"Width---: %d\n", this.wdth)

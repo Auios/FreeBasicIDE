@@ -14,14 +14,14 @@ nameSpace AuLib
         as long fileNumber
         as zstring*255 fileName
         
-        declare function openRead(fileName as zstring*255) as boolean
-        declare function openWrite(fileName as zstring*255) as boolean
+        declare function openRead(fileName as string) as boolean
+        declare function openWrite(fileName as string) as boolean
         declare sub closeFile()
         declare sub reset()
         declare function readLine() as string
     end type
     
-    function AuFile.openRead(fileName as zstring*255) as boolean
+    function AuFile.openRead(fileName as string) as boolean
         if(this.isOpen) then return false
         this.fileNumber = freeFile()
         this.fileName = fileName
@@ -30,7 +30,7 @@ nameSpace AuLib
         return this.isOpen
     end function
     
-    function AuFile.openWrite(fileName as zstring*255) as boolean
+    function AuFile.openWrite(fileName as string) as boolean
         if(this.isOpen) then return false
         this.fileNumber = freeFile()
         this.fileName = fileName

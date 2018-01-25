@@ -32,7 +32,7 @@ nameSpace AuLib
         return(wordsPassed)
     end function
     
-    sub printBar(charVar as zstring*1, charCount as long)
+    sub printBar(charVar as string, charCount as long)
         for printCount as integer = 1 to charCount
             printf(!"%s",charVar)
         next printCount
