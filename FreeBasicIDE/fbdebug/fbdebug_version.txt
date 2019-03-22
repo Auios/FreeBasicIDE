@@ -1,0 +1,296 @@
+=============================================================
+===== FBDEBUGGER / V2.64 / 27-JUL-2013 / (c) L.GRAS    =====
+=============================================================
+
+
+Version 2.64 (2013/07/27)
+
+Added
+- an option in tools menu to remove the log file in source codes tab.
+- the type of log (screen, file, ...) is saved in the ini file (request by Enform) 
+- in procs tab, the proc could be sorted by their name or by their file name, option in the contextual menu and saved in the file ini (requested by MOD)
+- in procs tab, select proc to jump in the source is also possible by pressing SHIFT key 
+- Operator, Property, Constructor, Destructor, Public and Private are displayed in red like Sub And function
+- In settings, customization of shortcut keys for every menu option
+- An option in tools menu to show all the shortcut keys.
+- some menu options corresponding to buttons (halt, kill, modify execution and fast run)
+- An option in tools menu to show the elapsed time when fast run is used. Usefull to get the duration of a block of instructions.
+
+Changed
+- new open file icon (more standard image) for better understanding (requested by MOD)
+- end message (quit fbdebugger) modified for better understanding (requested by MOD)
+- fbdebugger's help file is associated with fbdebugger and closed when quiting it (use of htlmphelp function)
+  In the future, easier use of the help file. 
+- Optimization of restart in order to avoid useless reloading of bas files (idea by MOD)
+
+Fixed
+- at debuggee loading remove the variable fb_compil_info to avoid its display
+- double display of shared arrays used with erase (FBC bug, fixed par dkl in a next release)
+- Issue with file names due to a change in FBC version 0.90 (reported by MOD)
+
+
+
+Version 2.63 (2013/04/22)
+
+Added :
+- Breakpoints saved in ini file.
+  when starting a new execution of FBdebugger, breakpoints from dll are displayed only if the corresponding dll is loaded.
+  in some cases hidden dll breakpoints could be removed, overwritten by others visible brkp
+- Brkpoints could now be disabled/enabled (colored in grey). In breakpoints management new buttons ENB/DSB.
+- If the selected line is without breakpoint when using disabled --> create directly a disabled permanent breakpoint
+- New icons replacing S,V,M and restart buttons
+- New option "Step return" (button and short cut key "B"ottom) : execution till the end (exit sub, end sub, etc) of the current proc.The purpose is to be able to look at the variables before leaving the proc.
+- New option "Step top" (button and short cut key "T"op) : execution till the first Line of next called proc.
+- In case of automatic change of thread (mutex or threadcreate) a message is displayed giving the choice of which thread will be the current.
+- Addresses (start, End And stack) about running proc  (option in threads menu).
+- Multi threads step auto : step auto alernates between selected threads (checkboxed in threads tree) 
+- Beginning of proc are marked by Keywords sub and function colored in red for better visibility. 
+
+Fixed :
+- Italic police no more used for highlighted keywords
+- Minor bugs
+- Optimization when restoring previous instruction (replacing &hCC)
+
+- The help file has been completly revised, v1.10.
+
+
+Version 2.62 (2013/02/16)
+
+Added
+- Tutorial demo (work in progress), see tutorial in tools
+
+Fixed
+- Issue when using mutexes (current thread not changed)
+- Some internal debugging traces removed
+
+
+Version 2.61 (2013/02/10)
+
+Added
+- show the first executable line of main (proc/var or thread context menus)
+- procs are now sorted by thread in proc/var windows
+- proc tree in threadview
+- few options added in thread context menu (eg select item to show proc in proc/var treeview)
+- new keywords (virtual and abstract) added
+- better management of dll
+- debugged Dlls list (tools)
+- watched var for dll : only basic types and pointers are kept between two debuggings
+- list all proc/var in log (proc/var context menu)
+
+Fixed
+- no calling line for a thread
+- issue when modifying execution on last line of proc
+- infinite loop when 2 dlls or more are loaded
+- other minor issues 
+- loading one time each source (never unload) (St_W)
+- closing handle of unloaded dll so they are no more locked by fbdebugger (St_W)
+- shared var provided by dll are now managed (St_W)
+
+WARNINGS
+- User manual not updated still 2.58 but not really a problem ;-)
+
+
+
+Version 2.60 2012/11/19
+
+Added
+- wrapping/no wrapping for the "Show String" Window (proc/var context menu)
+- choice of font including size, saved in the ini file (settings)
+- highlighted keywords (settings)
+- choice of the color for background and lines (current/breakpoint), saved in the ini file (settings)
+- strings (except wstring) can now be used with break on var, 25 chars max
+- new option "focus line" (shortkey L) in the source window opens a window to follow the executed line  or an other part of any source module. This window hasn't the horizontal scrolling style.(proc/var context menu)
+- set watch var with/without trace (proc/var context menu)
+- exchange between Byte And ZString type to fix the fact that with gcc the zstring are stored as byte array (proc/var context menu)
+- locate the line where a proc has been called (proc/var context menu)
+  For an easy use, collapse the treeview to see only the procs like a sort of call stack
+- option "show executable lines" has been replaced by "mark no executable lines", the lines are displayed in green (proc/var context menu)
+- Improvement in threads management (simultaneously 10 threads) :
+	To kill threads
+	To show next executed line
+	To locate the proc at the start of the thread
+- naked proc could be debugged (gas)
+- address in memory of cursor Line (sources window context menu)
+- parents tree for inheritance is displayed in proc/var Window, variables added by compiler are shown (proc/var window)
+
+	
+Fixed
+- issue when comments are used in asm lines
+- better support of -gen gcc option : the management of variables except some should be correct.
+  In fact Fbdebugger translates the gcc data stabs in the old form (-gen gas) before use.
+  Sometimes there are issues with line numbers, Not sure that it could be easily fixed.
+- issue with ThreadCreate crashing fbdebugger when exiting, missing argument "p as Any ptr" added in the called procs 
+- issue when the register EBP is modified in asm lines (reported by VANYA some months ago) 
+- issues With threads (few threads with same proc, deleting proc when ending thread)
+- issue when using screen command : killing proc --> freeze
+
+WARNINGS
+- if the version of gcc is > 3, add this parameter -Wc -gstabs+ in the FBC command-line in addition of -g otherwise the stab datas are not added
+- User manual not updated
+
+
+Version 2.59 2012/04/15
+Added
+- Shortcut key 'R' in source context menu  (jmg)
+- local watched kept between calls of proc (jmg)
+- watched kept when rerunning immediatly the debuggee (jmg)
+- watched kept except arrays and memories after closing fbdebugger (jmg)
+Changed
+- Use of shell to compile, no more need of batch file (Vanya)
+
+Version 2.58 2011/11/27
+Added
+- New help file : fbdebugger_help.chm version 1.0
+- The line breakpoints are kept when restarting the debuggee. You can eventually delete one or more breakpoints.
+- Two new hot keys (F3 and SHIFT+F3) to put/cancel breakpoints.
+
+Version 2.57 2011/09/12
+Added
+- variables or memory tracing when their values change (enform)
+- remove in case of already set watched element
+- different formats (hex, binary,..) for watched vars
+- jit debugger
+ this option allows to define fbdebugger to be automatically launched when a debugbreak instruction is met or an access vilation is occuring.
+ obviously your program has to be compiled with the -g option.
+ I remind you that there is a possibilty (by button or key M) to change the program flow within a procedure. So you can either skip lines
+ or rerun some lines with possible changes of values.
+- executable lines colored in green (only current source tab)
+Fixed 
+- options in watched var menu not working correctly
+
+
+Version 2.56 2011/07/26
+Added
+- Ctrl+F To complete 'the find in text' option in context menu
+- WString in 'show String'  (z/w/String option)
+- option in tools menu 'compile info' gives the version and the build date of FBC, the used backend and the debuggee compilation date
+  just add anywhere this line
+  Const FDBG_COMPIL_INFO="$$__COMPILINFO__$$"+__FB_VERSION__+"/"+__FB_BUILD_DATE__+"/"+__FB_BACKEND__+"/"+__DATE__+" "+__TIME__
+- Up To 10 bookmarks,ctrl+f2 To toogle, F2 to Next And shift+F2 to previous
+  only in the current file. When beggining or end of file is reached a dialog box allows to restart the search. 
+  There is also a possibility to select by a combo box showing all the bookmarks (all files)
+  <file name>[Line number]beginning of the line
+Changed
+- Hotkeys run cursor, etc put at top of right click menu
+- the current line moves and no more the source code unless necessary
+- focus set on the find text window and initial value highligted
+Fixed
+- The code source stays always left justified even with long lines
+
+Version 2.55 2011/07/17
+Added
+- Check if a var is already watched (jmg)
+- more informations about files locations, params in settings (jmg)
+- left click + ALT on a variable to add it in the watched var list(jmg)
+- use of Fx to direct acces (jmg)
+  F1 to display the help file
+  F9 to compil the main source and run in debug mode
+  F10 to launch the IDE with the main source
+  F11 to start the quick edit mode 
+- Option to kill running pgm when use of quick edit
+- 2 options in quick edit : [save,compile and run] if only one source file / [reload] (jmg)
+- message if right click and no watched var 
+- shortcut keys in the menus (jmg)
+- up to 10 'show/expand' windows with the possibility to close/to arrange all (AGS)
+- option in the 'show/expand' window to move forward/backward in function of size of standard or udt type (AGS)
+Fixed
+- the options for log not displayed and 'no log' by default restored
+- missing name of debuggee exe in the commandline (AGS)
+- focus set and visible cursor when quick editing (jmg)
+- no more issue with debug hot keys in quick edit (jmg)
+- missing options (edit,dump, etc) in watched var list
+
+Version 2.54 2011/07/07
+Added
+- the possibility to desactivate the tooltips (settings), choice saved in the ini file (idea from Enform) 
+- a control to check if FBDebugger is already running, with the choice to stop or continue (idea from Vanya) 
+Fixed
+-  some 'little' bugs, all the compilation warnings 
+-  parameters in commandline mode are now used for the debuggee and also in case of bas file for compiling
+Changed
+- up to 10 watched variables or pieces of memory, updated also when auto mode
+- enlarged console window for trace 
+- position of displayed current line (settings) ' 5 lines from top, 1/3, 1/2, 2/3  saved in the ini file
+- size font now saved in the ini file 
+
+
+Version 2.53 2011/05/01
+- add possibility to terminate directly the debuggee when launching it again or a new one
+
+Version 2.52 2011/04/21
+- add use left click + CTRL on a variable name for direct access to informations about this variable
+- fix a display bug on the sources windows
+- add drag and drop files (exe or bas) on the FBdebugger window to start compiling (bas) and debugging
+- chg path/name of fbc and ide put with settings are now saved when exiting fbdebugger
+- chg load .bas then auto compilation and debugging
+
+Version 2.51 2010/03/07
+- add possibility to change the font size (8,10,12)
+
+Version 2.5 2010/01/24
+- add list of named enums (tools)
+- add if enum named show text for the values of the item
+- add show/expand variables including udt/pointer
+      with edit, dump, etc
+- add more complete "un"mangling names (operator)
+- chg display log file as source so find text is possible
+- fix crash when using settings with killed debuggee
+
+Version 2.4 2010/01/03
+- Goto line in sources windows shows also the current line number 
+- Option in tools to delete the log file
+- Shared and common variables management , display outside main proc
+- Fix wrong display of [+] in proc/vars window (thanks McLovin)
+- Fix lost cmdlines (thanks McLovin)
+- Fix big bug with udt inside few modules 
+- "loading debug data" and "loading sources" messages in status bar
+- Fix named enum in stabs management, treated as integer
+- Fix wrong return value display (private/public and all datatypes)
+
+Version 2.3 2009/12/20
+- Now size source file up to 500000 bytes
+
+Version 2.2 2009/12/16
+- Change police for monospace "Courier New" (all the windows)
+
+
+Version 2.1
+- a nice icone for FBdebugger
+- you can now easily switch between threads, only one could be in execution while the other ones are waiting
+- an option in variables window menu allows to display a string, up to 32000 characters (for more use dump).
+- you can attach the debugger to a running program, usefull in case of infinite loop. double click on the process to attach
+- warning if a source file is newer than the executable file
+
+
+version 2.0
+- many fixed bugs (display, use, etc)
+- execution modify (only in the same proc) to skip some lines or to execute again some parts
+- new display (more line for codes and variables) with resize
+- speed improvement (2 threads : one for GUI and the other to treat the breakpoint)
+  and fast run
+- fast run by mimimum over head but no possibility of break on var or on mem as standard run
+- trace (proc and line) on a console, file or both. Console displayed only if needed
+- verbose mode on/off to get address and advanced informations
+- settings
+- access violation (memory error) managed : you can change values/skip (not executed) the concerned instructions or terminate the program.
+- the name of proc displayed with proc pointer
+- index selection for arrays, you can easily watch the elements one by one
+- shortcut keys  (step, run, etc)
+- bitfield in udt, only displayed
+- for datatype ptr shows also the data (edit mode)
+
+
+
+
+- Feel free to send me (sarg AT aliceadsl DOT fr) bugs, remarks and especially suggestions, improvements
+
+
+
+
+
+
+
+
+
+
+

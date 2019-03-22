@@ -1,0 +1,11 @@
+This button allows to load the exe you want to debug.
+There are other ways : drag and drop, command line, debug break,etc.
+Click next to load tutorial.exe.
+In case of an other debuggee yet running it will be terminated.###
+Debuggee loaded, debugging could begin.###
+In this window sources are displayed, one by one under each tab.###
+This button allows to execute the next line (highlighted or underlined).
+There are other buttons to continue : cursor, jump over proc, go out proc,etc.###
+Right click gives access to the context menu.###
+This is the end of tutorial, for now.###
+###' keep this line empty

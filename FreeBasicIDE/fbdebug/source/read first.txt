@@ -1,0 +1,29 @@
+Notes concerning FBdebugger.bas 27-NOV-2011
+-------------------------------------------
+
+
+Welcome in board reckless ;-)
+
+As I'm "old school" only one source file (some bmp for the buttons), a lot of shared variables and no OOP.
+Not much comments and some in french
+
+Fundamental :
+- First find the right address inside the exe then load, cut up and store the debug informations
+- In case of DLL do the same
+- For every executable line replace the first byte of instruction by the code &hCC to force an interruption/break point
+- Finally before release, put the initial code and change it again after execution
+
+- Two threads : one for UI and the other one to manage the exceptions ( breakpoint for example)
+
+- In case of fast execution reset the code everywhere
+ 
+- A lot of windows API are used for debugging and also the UI so Windows does all the job (refreshes,etc..).
+- Every windows and every dialog are made inside the program, no ressource except for the buttons (fbdebugger.rc).
+- Many variables form a sort of data base, if needed I'll draw the schema (actually on paper)
+
+
+
+Use the help file, fbdebugger_help.chm, to get more information (use, compile, etc)
+
+
+Good luck and feel free to email me (to not pollute the forum) if you need some help, a debugger it's a bit tricky.
