@@ -1,4 +1,0 @@
-This is a test file.
-This could contain your data.
-Doesn't the Extended Library rock?
-Woot!

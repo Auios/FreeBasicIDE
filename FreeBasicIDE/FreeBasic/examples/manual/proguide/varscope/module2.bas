@@ -3,7 +3,7 @@
 '' NOTICE: This file is part of the FreeBASIC Compiler package and can't
 ''         be included in other distributions without authorization.
 ''
-'' See Also: http://www.freebasic.net/wiki/wikka.php?wakka=ProPgVariableScope
+'' See Also: https://www.freebasic.net/wiki/wikka.php?wakka=ProPgVariableScope
 '' --------
 
 Common m1 As Integer
@@ -17,6 +17,6 @@ Print "m2 = "; m2     ' m2 = 2
 
 Sub Print_Values()
   Print "Module2.Print_Values"
-  Print "m1 = "; m1   ' Implicit variable = 0    
-  Print "m2 = "; m2   ' Implicit variable = 0  
+  Print "m1 = "; m1   ' Implicit variable = 0, because '-lang qb' use
+  Print "m2 = "; m2   ' Implicit variable = 0, because '-lang qb' use
 End Sub

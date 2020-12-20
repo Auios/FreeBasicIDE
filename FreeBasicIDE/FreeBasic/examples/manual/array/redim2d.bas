@@ -3,7 +3,7 @@
 '' NOTICE: This file is part of the FreeBASIC Compiler package and can't
 ''         be included in other distributions without authorization.
 ''
-'' See Also: http://www.freebasic.net/wiki/wikka.php?wakka=KeyPgRedim
+'' See Also: https://www.freebasic.net/wiki/wikka.php?wakka=KeyPgRedim
 '' --------
 
 '' Define a variable-length array
@@ -18,9 +18,9 @@ Print "3 * 4:"
 Print
 For i = LBound(array, 1) To UBound(array, 1)
 	For j = LBound(array, 2) To UBound(array, 2)
-	    array(i, j) = n
-	    Print Using "##  "; array(i, j);
-	    n += 1
+		array(i, j) = n
+		Print Using "##  "; array(i, j);
+		n += 1
 	Next
 	Print
 Next
@@ -29,13 +29,13 @@ Print
 
 '' ReDim Preserve array to have 4*4 elements, preserving the contents
 '' (only the first upper bound should be changed)
-ReDim Preserve array(1 To 4, 1 To 4) As Integer
+ReDim Preserve array(1 To 4, 1 To 4)
 
 Print "4 * 4:"
 Print
 For i = LBound(array, 1) To UBound(array, 1)
 	For j = LBound(array, 2) To UBound(array, 2)
-	    Print Using "##  "; array(i, j);
+		Print Using "##  "; array(i, j);
 	Next
 	Print
 Next
@@ -44,13 +44,13 @@ Print
 
 '' ReDim Preserve array to have 2*4 elements, preserving but trancating the contents
 '' (only the first upper bound should be changed)
-ReDim Preserve array(1 To 2, 1 To 4) As Integer
+ReDim Preserve array(1 To 2, 1 To 4)
 
 Print "2 * 4:"
 Print
 For i = LBound(array, 1) To UBound(array, 1)
 	For j = LBound(array, 2) To UBound(array, 2)
-	    Print Using "##  "; array(i, j);
+		Print Using "##  "; array(i, j);
 	Next
 	Print
 Next
